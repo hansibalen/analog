@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: local('HelveticaNeue'),
+    url(../assets/fonts/HelveticaNeue.woff2) format('woff2');
+}
+
+body {
+  box-sizing: border-box;
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto !important;
+}
