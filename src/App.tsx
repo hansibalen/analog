@@ -11,15 +11,15 @@ import './index.css'
 //Initial theme settings
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
-      default: '#1B1C1E',
+      default: '#e2e2e2',
     },
   },
   typography: {
     fontFamily: 'HelveticaNeue',
     allVariants: {
-      color: '#FFFFFF',
+      color: '#2a2b28',
     },
   },
 })

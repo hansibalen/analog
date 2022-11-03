@@ -31,43 +31,33 @@ const Navbar = (): React.ReactElement => {
     <NavbarContainer>
       {/* Temporary logo */}
       <StyledLink href="/">
-        <Typography
-          sx={{
-            textAlign: 'center',
-            fontWeight: '600',
-            fontSize: '2rem',
-            letterSpacing: '.3rem',
-            '&:hover': {
-              transition: 'all .2s linear',
-              color: '#069A8E',
-            },
-          }}
-        >
-          [hb]
-        </Typography>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <PathLink>
+            <Typography
+              sx={{
+                textAlign: 'center',
+                fontWeight: '600',
+                fontSize: '2rem',
+                letterSpacing: '.3rem',
+                '&:hover': {
+                  transition: 'all .2s linear',
+                  color: '#069A8E',
+                },
+              }}
+            >
+              [hb]
+            </Typography>
+          </PathLink>
+        </Link>
       </StyledLink>
 
       <PathBox>
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <PathLink>Home</PathLink>
+        <Link to="/Work" style={{ textDecoration: 'none' }}>
+          <PathLink>Work</PathLink>
         </Link>
         <Link to="/About" style={{ textDecoration: 'none' }}>
           <PathLink>About</PathLink>
         </Link>
-        <Link to="/Work" style={{ textDecoration: 'none' }}>
-          <PathLink>Work</PathLink>
-        </Link>
-      </PathBox>
-
-      {/* Temporary text, svg icons go here */}
-      <PathBox>
-        <StyledLink
-          href="https://github.com/hnsblnbrg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <PathLink>GitHub</PathLink>
-        </StyledLink>
       </PathBox>
     </NavbarContainer>
   )
