@@ -1,19 +1,33 @@
-import { Typography } from '@mui/material'
+import { Typography, Box } from '@mui/material'
 
 const Home = (): React.ReactElement => {
   return (
-    <div>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <Typography
         sx={{
-          textAlign: 'center',
-          marginTop: '20px',
+          textAlign: 'left',
           fontWeight: '400',
-          fontSize: '2rem',
+          fontSize: '8rem',
         }}
       >
-        Home title
+        Hansi Brahimasi
       </Typography>
-    </div>
+      <Typography
+        sx={{
+          textAlign: 'left',
+          marginTop: '20px',
+          fontWeight: '300',
+          fontSize: '3rem',
+        }}
+      >
+        An analogue journey...
+      </Typography>
+    </Box>
   )
 }
 

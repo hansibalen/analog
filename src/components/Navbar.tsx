@@ -31,29 +31,28 @@ const Navbar = (): React.ReactElement => {
     <NavbarContainer>
       {/* Temporary logo */}
       <StyledLink href="/">
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <PathLink>
-            <Typography
-              sx={{
-                textAlign: 'center',
-                fontWeight: '600',
-                fontSize: '2rem',
-                letterSpacing: '.3rem',
-                '&:hover': {
-                  transition: 'all .2s linear',
-                  color: '#069A8E',
-                },
-              }}
-            >
-              [hb]
-            </Typography>
-          </PathLink>
-        </Link>
+        <Typography
+          sx={{
+            textAlign: 'center',
+            fontWeight: '600',
+            fontSize: '2rem',
+            letterSpacing: '.3rem',
+            '&:hover': {
+              transition: 'all .2s linear',
+              color: '#069A8E',
+            },
+          }}
+        >
+          [hb]
+        </Typography>
       </StyledLink>
 
       <PathBox>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <PathLink>Home</PathLink>
+        </Link>
         <Link to="/Work" style={{ textDecoration: 'none' }}>
-          <PathLink>Work</PathLink>
+          <PathLink>Gallery</PathLink>
         </Link>
         <Link to="/About" style={{ textDecoration: 'none' }}>
           <PathLink>About</PathLink>
