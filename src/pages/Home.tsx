@@ -6,20 +6,20 @@ const Home = (): React.ReactElement => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'center',
+        height: 'calc(100vh - 104px)',
       }}
     >
       <Typography
         sx={{
-          textAlign: 'left',
           fontWeight: '400',
-          fontSize: '8rem',
+          fontSize: '9rem',
         }}
       >
         Hansi Brahimasi
       </Typography>
       <Typography
         sx={{
-          textAlign: 'left',
           marginTop: '20px',
           fontWeight: '300',
           fontSize: '3rem',

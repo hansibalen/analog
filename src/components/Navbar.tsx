@@ -1,5 +1,6 @@
 import { Typography, Box, styled, Link as MUILink } from '@mui/material'
 import { Link } from 'react-router-dom'
+import logo from '../../assets/images/logon.png'
 
 // Styled components
 const NavbarContainer = styled(Box)((_) => ({
@@ -8,7 +9,7 @@ const NavbarContainer = styled(Box)((_) => ({
 }))
 
 const PathLink = styled(Typography)((_) => ({
-  fontSize: '1.2rem',
+  fontSize: '1.6rem',
   '&:hover': {
     transition: 'all .2s linear',
     color: '#069A8E',
@@ -29,22 +30,9 @@ const StyledLink = styled(MUILink)(() => ({
 const Navbar = (): React.ReactElement => {
   return (
     <NavbarContainer>
-      {/* Temporary logo */}
+      {/* Logo */}
       <StyledLink href="/">
-        <Typography
-          sx={{
-            textAlign: 'center',
-            fontWeight: '600',
-            fontSize: '2rem',
-            letterSpacing: '.3rem',
-            '&:hover': {
-              transition: 'all .2s linear',
-              color: '#069A8E',
-            },
-          }}
-        >
-          [hb]
-        </Typography>
+        <img src={logo} alt="navbar-logo" />
       </StyledLink>
 
       <PathBox>
