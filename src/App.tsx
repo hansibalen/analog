@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
-import './index.css'
 
 const App = (): React.ReactElement => {
   return (
