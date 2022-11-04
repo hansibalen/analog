@@ -10,10 +10,6 @@ const NavbarContainer = styled(Box)((_) => ({
 
 const PathLink = styled(Typography)((_) => ({
   fontSize: '1.6rem',
-  '&:hover': {
-    transition: 'all .2s linear',
-    color: '#069A8E',
-  },
 }))
 
 const PathBox = styled(Box)((_) => ({
