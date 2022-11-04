@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
   font-family: 'HelveticaNeue';
   src: local('HelveticaNeue'),
@@ -9,6 +10,7 @@
   src: local('NeueMedium'), url(../assets/fonts/NeueMedium.woff) format('woff');
 }
 
+/* Global styling */
 body {
   box-sizing: border-box;
   padding: 20px;

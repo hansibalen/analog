@@ -1,10 +1,12 @@
 import { Typography, Box } from '@mui/material'
 import { TabTitle } from '../../utils/GeneralFunctions'
+const { motion } = require('framer-motion')
 
 const Home = (): React.ReactElement => {
   TabTitle('HB Analogue - Home')
   return (
     <Box
+      component={motion.div}
       sx={{
         display: 'flex',
         flexDirection: 'column',
