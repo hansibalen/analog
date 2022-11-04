@@ -1,6 +1,8 @@
 import { Typography } from '@mui/material'
+import { TabTitle } from '../../utils/GeneralFunctions'
 
 const About = (): React.ReactElement => {
+  TabTitle('HB Analogue - About')
   return (
     <div>
       <Typography

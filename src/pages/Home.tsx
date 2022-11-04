@@ -1,6 +1,8 @@
 import { Typography, Box } from '@mui/material'
+import { TabTitle } from '../../utils/GeneralFunctions'
 
 const Home = (): React.ReactElement => {
+  TabTitle('HB Analogue - Home')
   return (
     <Box
       sx={{
