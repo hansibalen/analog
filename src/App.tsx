@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
-import Work from './pages/Work'
+import Gallery from './pages/Gallery'
 import { ThemeProvider, createTheme } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 import './index.css'
@@ -38,7 +38,7 @@ const App = (): React.ReactElement => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </Theme>
       </Router>

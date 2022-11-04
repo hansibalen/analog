@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import { TabTitle } from '../../utils/GeneralFunctions'
 
-const Work = (): React.ReactElement => {
+const Gallery = (): React.ReactElement => {
   TabTitle('HB Analogue - Gallery')
   return (
     <div>
@@ -13,10 +13,10 @@ const Work = (): React.ReactElement => {
           fontSize: '2rem',
         }}
       >
-        Work title
+        Gallery title
       </Typography>
     </div>
   )
 }
 
-export default Work
+export default Gallery

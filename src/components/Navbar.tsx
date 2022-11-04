@@ -35,7 +35,7 @@ const Navbar = (): React.ReactElement => {
         <Link to="/" style={{ textDecoration: 'none' }}>
           <PathLink>Home</PathLink>
         </Link>
-        <Link to="/Work" style={{ textDecoration: 'none' }}>
+        <Link to="/Gallery" style={{ textDecoration: 'none' }}>
           <PathLink>Gallery</PathLink>
         </Link>
         <Link to="/About" style={{ textDecoration: 'none' }}>
