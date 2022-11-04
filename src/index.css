@@ -4,6 +4,11 @@
     url(../assets/fonts/HelveticaNeue.woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'NeueMedium';
+  src: local('NeueMedium'), url(../assets/fonts/NeueMedium.woff) format('woff');
+}
+
 body {
   box-sizing: border-box;
   padding: 20px;

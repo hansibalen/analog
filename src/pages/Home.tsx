@@ -9,7 +9,7 @@ const Home = (): React.ReactElement => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        height: 'calc(100vh - 104px)',
+        height: 'calc(100vh - 105px)',
       }}
     >
       <Typography

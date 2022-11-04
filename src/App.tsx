@@ -17,7 +17,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'HelveticaNeue',
+    fontFamily: 'NeueMedium',
     allVariants: {
       color: '#2a2b28',
     },
