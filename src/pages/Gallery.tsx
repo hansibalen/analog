@@ -9,7 +9,7 @@ const Gallery = (): React.ReactElement => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h1>Gallery test</h1>
+      <h1 className="gallery-title">Gallery</h1>
     </motion.div>
   )
 }

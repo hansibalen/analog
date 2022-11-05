@@ -8,7 +8,6 @@ import './sass/main.scss'
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Home from '../src/pages/Home'
-import Explore from '../src/pages/Explore'
 import About from '../src/pages/About'
 import Gallery from '../src/pages/Gallery'
 
@@ -32,12 +31,12 @@ const App = (): React.ReactElement => {
             <Router>
               <Navbar />
               <Routes>
+                {!loading}
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/gallery" element={<Gallery />} />
               </Routes>
             </Router>
-            {!loading && <Explore />}
           </>
         )}
       </AnimatePresence>

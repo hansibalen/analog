@@ -1,6 +1,7 @@
 import { TabTitle } from '../../utils/GeneralFunctions'
 import React, { useEffect } from 'react'
 const { motion } = require('framer-motion')
+import Explore from './Explore'
 
 const hero = {
   initial: {},
@@ -91,6 +92,7 @@ const Home = (): React.ReactElement => {
     <motion.div className="hero" variants={hero}>
       <HeroTopRow title={'hansi'} />
       <HeroBottomRow title={'brahimasi'} />
+      <Explore />
     </motion.div>
   )
 }

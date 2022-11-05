@@ -9,7 +9,7 @@ const About = (): React.ReactElement => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h1>About Me</h1>
+      <h1 className="about-title">About Me</h1>
     </motion.div>
   )
 }
