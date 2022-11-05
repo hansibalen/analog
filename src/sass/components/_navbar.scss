@@ -40,12 +40,17 @@
       li {
         list-style: none;
         margin: 0 40px;
-        a {
+        a,
+        .nav-logo {
           text-decoration: none;
           color: $black;
           white-space: nowrap;
         }
       }
+    }
+    .nav-logo {
+      text-decoration: none;
+      color: $black;
     }
     .contact {
       @media (max-width: $layout-breakpoint-medium) {
