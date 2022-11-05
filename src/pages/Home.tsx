@@ -3,12 +3,14 @@ import React, { useEffect } from 'react'
 const { motion } = require('framer-motion')
 
 const hero = {
+  initial: {},
   animate: {
     transition: {
       delayChildren: 0.4,
       staggerChildren: 0.1,
     },
   },
+  exit: { opacity: 0, y: -200 },
 }
 
 const letterAnimation = {
@@ -49,11 +51,11 @@ const AnimatedLetters = ({
     initial="initial"
     animate="animate"
   >
-    {[...title].map((letter: string) => (
+    {[...title].map((letter: string, id: number) => (
       <motion.span
         className="row-letter"
         variants={disabled ? null : letterAnimation}
-        key={title}
+        key={id}
       >
         {letter}
       </motion.span>

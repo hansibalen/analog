@@ -1,11 +1,16 @@
 import { TabTitle } from '../../utils/GeneralFunctions'
+import { motion } from 'framer-motion'
 
 const Gallery = (): React.ReactElement => {
   TabTitle('HB Analogue - Gallery')
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1>Gallery test</h1>
-    </div>
+    </motion.div>
   )
 }
 
