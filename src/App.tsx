@@ -8,6 +8,7 @@ import './sass/main.scss'
 import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Home from '../src/pages/Home'
+import Explore from '../src/pages/Explore'
 import About from '../src/pages/About'
 import Gallery from '../src/pages/Gallery'
 
@@ -36,15 +37,7 @@ const App = (): React.ReactElement => {
                 <Route path="/gallery" element={<Gallery />} />
               </Routes>
             </Router>
-            {!loading && (
-              <div className="transition-image final">
-                <motion.img
-                  transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-                  src={`/images/image-2.jpg`}
-                  layoutId="main-image-1"
-                />
-              </div>
-            )}
+            {!loading && <Explore />}
           </>
         )}
       </AnimatePresence>

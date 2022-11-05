@@ -24,20 +24,6 @@ const letterAnimation = {
   },
 }
 
-const Home = (): React.ReactElement => {
-  TabTitle('HB Analogue - Home')
-
-  useEffect(() => {
-    setTimeout(() => 2000)
-  }, [])
-  return (
-    <motion.div className="hero" variants={hero}>
-      <HeroTopRow title={'hansi'} />
-      <HeroBottomRow title={'brahimasi'} />
-    </motion.div>
-  )
-}
-
 const AnimatedLetters = ({
   title,
   disabled,
@@ -92,6 +78,20 @@ const HeroBottomRow = ({ title }: { title: string }) => {
     <div className={'hero-row center'}>
       <AnimatedLetters title={title} disabled={false} />
     </div>
+  )
+}
+
+const Home = (): React.ReactElement => {
+  TabTitle('HB Analogue - Home')
+
+  useEffect(() => {
+    setTimeout(() => 2000)
+  }, [])
+  return (
+    <motion.div className="hero" variants={hero}>
+      <HeroTopRow title={'hansi'} />
+      <HeroBottomRow title={'brahimasi'} />
+    </motion.div>
   )
 }
 

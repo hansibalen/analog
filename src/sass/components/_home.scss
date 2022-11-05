@@ -32,6 +32,7 @@
         font-size: 7rem;
       }
     }
+
     .row-col {
       width: 50%;
       display: flex;
@@ -108,10 +109,34 @@
     z-index: -100;
     @media (max-width: $layout-breakpoint-xsmall) {
       top: -56px;
+      height: 1vh;
     }
     img {
       width: 100%;
       max-width: 100%;
     }
   }
+}
+
+// Explore
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  height: 20vh;
+  text-align: right;
+}
+
+.main-title,
+.explore-button {
+  font-size: 8rem;
+  font-weight: 600;
+  color: $black;
+  text-decoration: none;
+  @media (max-width: $layout-breakpoint-xsmall) {
+    font-size: 3rem;
+  }
+}
+.explore-button {
+  margin-top: 2rem;
 }
