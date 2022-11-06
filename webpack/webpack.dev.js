@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
     new webpack.DefinePlugin({
-      'process.env.name': JSON.stringify('Hansi Brahimasi'),
+      'process.env.name': JSON.stringify(),
     }),
   ],
 }
