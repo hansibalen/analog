@@ -24,8 +24,7 @@ const Explore = (): React.ReactElement => {
       <div className="explore">
         <h1 className="subtitle">A curated memory box.</h1>
         <Link to={{ pathname: '/gallery' }}>
-          <motion.a
-            href="/gallery"
+          <motion.div
             className="explore-btn"
             whileHover={{
               color: '#bf8041',
@@ -38,7 +37,7 @@ const Explore = (): React.ReactElement => {
             }}
           >
             Explore now.
-          </motion.a>
+          </motion.div>
         </Link>
       </div>
     </motion.div>
