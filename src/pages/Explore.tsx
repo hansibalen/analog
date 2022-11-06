@@ -16,11 +16,14 @@ const Explore = (): React.ReactElement => {
             href="/gallery"
             className="explore-btn"
             whileHover={{
-              color: '#24242a',
-              backgroundColor: '#bf8041',
+              color: '#bf8041',
+              backgroundColor: '#24242a',
               transition: { ease: 'easeInOut', duration: 0.3 },
             }}
-            whileTap={{ scale: 0.8 }}
+            whileTap={{
+              scale: 0.8,
+              transition: { ease: 'easeIn' },
+            }}
           >
             Explore now.
           </motion.a>

@@ -1,6 +1,6 @@
 import { TabTitle } from '../../utils/GeneralFunctions'
 import React, { useEffect } from 'react'
-const { motion } = require('framer-motion')
+import { motion } from 'framer-motion'
 import Explore from './Explore'
 
 const hero = {
@@ -34,14 +34,14 @@ const AnimatedLetters = ({
 }) => (
   <motion.span
     className="row-title"
-    variants={disabled ? null : hero}
+    variants={disabled ? undefined : hero}
     initial="initial"
     animate="animate"
   >
     {[...title].map((letter: string, id: number) => (
       <motion.span
         className="row-letter"
-        variants={disabled ? null : letterAnimation}
+        variants={disabled ? undefined : letterAnimation}
         key={id}
       >
         {letter}
