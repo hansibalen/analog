@@ -2,7 +2,12 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import * as React from 'react'
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import './sass/main.scss'
 import Loader from './components/Loader'
@@ -13,6 +18,7 @@ import Gallery from '../src/pages/Gallery'
 
 const App = (): React.ReactElement => {
   const [loading, setLoading] = useState(true)
+  const location = useLocation()
 
   useEffect(() => {
     loading
@@ -28,15 +34,13 @@ const App = (): React.ReactElement => {
           </motion.div>
         ) : (
           <>
-            <Router>
-              <Navbar />
-              <Routes>
-                {!loading}
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/gallery" element={<Gallery />} />
-              </Routes>
-            </Router>
+            <Navbar />
+            <Routes location={location} key={location.pathname}>
+              {!loading}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/gallery" element={<Gallery />} />
+            </Routes>
           </>
         )}
       </AnimatePresence>

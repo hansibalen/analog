@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-const { motion } = require('framer-motion')
+import { motion } from 'framer-motion'
 
 const Navbar = (): React.ReactElement => {
   return (
