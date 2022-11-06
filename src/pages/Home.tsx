@@ -11,7 +11,7 @@ const hero = {
       staggerChildren: 0.1,
     },
   },
-  exit: { opacity: 0, y: -200 },
+  exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
 }
 
 const letterAnimation = {
@@ -89,7 +89,7 @@ const Home = (): React.ReactElement => {
     setTimeout(() => 2000)
   }, [])
   return (
-    <motion.div className="hero" variants={hero}>
+    <motion.div className="hero" variants={hero} exit="exit">
       <HeroTopRow title={'hansi'} />
       <HeroBottomRow title={'brahimasi'} />
       <Explore />

@@ -1,9 +1,21 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
+const exploreAnim = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
+}
+
 const Explore = (): React.ReactElement => {
   return (
-    <div className="transition-image final">
+    <motion.div
+      className="transition-image final"
+      variants={exploreAnim}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <motion.img
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
         src={`/images/image-2.jpg`}
@@ -29,7 +41,7 @@ const Explore = (): React.ReactElement => {
           </motion.a>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

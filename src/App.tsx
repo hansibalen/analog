@@ -2,12 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import * as React from 'react'
 import { useEffect, useState } from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import './sass/main.scss'
 import Loader from './components/Loader'
@@ -35,12 +30,14 @@ const App = (): React.ReactElement => {
         ) : (
           <>
             <Navbar />
-            <Routes location={location} key={location.pathname}>
-              {!loading}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/gallery" element={<Gallery />} />
-            </Routes>
+            <AnimatePresence exitBeforeEnter>
+              <Routes location={location} key={location.pathname}>
+                {!loading}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/gallery" element={<Gallery />} />
+              </Routes>
+            </AnimatePresence>
           </>
         )}
       </AnimatePresence>
