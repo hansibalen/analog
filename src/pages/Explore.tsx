@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Explore = (): React.ReactElement => {
   return (
@@ -10,17 +11,20 @@ const Explore = (): React.ReactElement => {
       />
       <div className="explore">
         <h1 className="subtitle">A curated memory box.</h1>
-        <motion.a
-          href="/gallery"
-          className="explore-btn"
-          whileHover={{
-            color: '#bf8041',
-            transition: { duration: 0.3 },
-          }}
-          whileTap={{ scale: 0.9 }}
-        >
-          Explore now.
-        </motion.a>
+        <Link to={{ pathname: '/gallery' }}>
+          <motion.a
+            href="/gallery"
+            className="explore-btn"
+            whileHover={{
+              color: '#24242a',
+              backgroundColor: '#bf8041',
+              transition: { ease: 'easeInOut', duration: 0.3 },
+            }}
+            whileTap={{ scale: 0.8 }}
+          >
+            Explore now.
+          </motion.a>
+        </Link>
       </div>
     </div>
   )
