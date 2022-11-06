@@ -119,16 +119,14 @@
 }
 
 // Explore
-.main {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  height: 20vh;
+.explore {
+  margin-top: 3rem;
   text-align: right;
+  float: right;
 }
 
-.main-title,
-.explore-button {
+.subtitle,
+.explore-btn {
   font-size: 8rem;
   font-weight: 600;
   color: $black;
@@ -137,8 +135,10 @@
     font-size: 3rem;
   }
 }
-.explore-button {
+
+.explore-btn {
   margin-top: 2rem;
+  display: inline-block;
 }
 
 .gallery-title,

@@ -8,12 +8,20 @@ const Explore = (): React.ReactElement => {
         src={`/images/image-2.jpg`}
         layoutId="main-image-1"
       />
-      <motion.div className="main">
-        <h1 className="main-title">A curated memory box.</h1>
-        <a href="/" className="explore-button">
+      <div className="explore">
+        <h1 className="subtitle">A curated memory box.</h1>
+        <motion.a
+          href="/gallery"
+          className="explore-btn"
+          whileHover={{
+            color: '#bf8041',
+            transition: { duration: 0.3 },
+          }}
+          whileTap={{ scale: 0.9 }}
+        >
           Explore now.
-        </a>
-      </motion.div>
+        </motion.a>
+      </div>
     </div>
   )
 }
