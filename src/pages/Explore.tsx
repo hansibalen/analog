@@ -21,7 +21,16 @@ const Explore = (): React.ReactElement => {
         src={`/images/image-2.jpg`}
         layoutId="main-image-1"
       />
-      <div className="explore">
+      <motion.div
+        className="explore"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { ease: 'easeInOut', duration: 1.2, delay: 0.8 },
+        }}
+        exit={{ opacity: 0 }}
+      >
         <h1 className="subtitle">A curated memory box.</h1>
         <Link to={{ pathname: '/gallery' }}>
           <motion.div
@@ -39,7 +48,7 @@ const Explore = (): React.ReactElement => {
             Explore now.
           </motion.div>
         </Link>
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
