@@ -67,7 +67,7 @@ const HeroTopRow = ({ title }: { title: string }) => {
         className="row-col"
       >
         <span className="row-message">
-          An analogue journey, spanning over the course of 7 years.
+          What is a man, but the sum of his memories?
         </span>
       </motion.div>
     </div>
