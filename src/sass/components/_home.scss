@@ -54,34 +54,7 @@
         font-weight: 500;
         font-size: 1.8rem;
         line-height: 2.6rem;
-        width: 320px;
-      }
-    }
-    .scroll {
-      height: 160px;
-      width: 160px;
-      border-radius: 100%;
-      background: $white;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      left: 160px;
-      @media (max-width: $layout-breakpoint-medium) {
-        left: 60px;
-      }
-      @media (max-width: 1240px) {
-        display: none;
-      }
-      span {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 4px 0;
-        @media (max-width: $layout-breakpoint-xsmall) {
-          font-size: 10px;
-          margin: 2px 0;
-        }
+        width: 420px;
       }
     }
   }
