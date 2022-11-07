@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+import { motion, LayoutGroup, AnimatePresence } from 'framer-motion';
 import './sass/main.scss';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
@@ -20,7 +20,7 @@ const App = (): React.ReactElement => {
       : document.querySelector('body')!.classList.remove('loading');
   }, [loading]);
   return (
-    <AnimateSharedLayout>
+    <LayoutGroup>
       <AnimatePresence>
         {loading ? (
           <motion.div key='loader'>
@@ -29,7 +29,7 @@ const App = (): React.ReactElement => {
         ) : (
           <>
             <Navbar />
-            <AnimatePresence exitBeforeEnter>
+            <AnimatePresence mode='wait'>
               <Routes location={location} key={location.pathname}>
                 {!loading}
                 <Route path='/' element={<Home />} />
@@ -40,7 +40,7 @@ const App = (): React.ReactElement => {
           </>
         )}
       </AnimatePresence>
-    </AnimateSharedLayout>
+    </LayoutGroup>
   );
 };
 
