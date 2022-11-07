@@ -1,3 +1,3 @@
-# Hansi Brahimasi - Analogue
+# Analogue
 
-A portfolio site, showcasing my photography, all shot on film.
+A SPA photography portfolio, coded in React, TypeScript & SASS.

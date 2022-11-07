@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import React from 'react';
 
 export const TabTitle = (newTitle: string) => {
-  return (document.title = newTitle)
-}
+  return (document.title = newTitle);
+};
 
 // Text animation
 export const hero = {
@@ -14,7 +15,7 @@ export const hero = {
     },
   },
   exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
-}
+};
 
 const letterAnimation = {
   initial: { y: 400 },
@@ -25,24 +26,24 @@ const letterAnimation = {
       duration: 1,
     },
   },
-}
+};
 
 export const AnimatedLetters = ({
   title,
   disabled,
 }: {
-  title: string
-  disabled?: boolean
+  title: string;
+  disabled?: boolean;
 }) => (
   <motion.span
-    className="row-title"
+    className='row-title'
     variants={disabled ? undefined : hero}
-    initial="initial"
-    animate="animate"
+    initial='initial'
+    animate='animate'
   >
     {[...title].map((letter: string, id: number) => (
       <motion.span
-        className="row-letter"
+        className='row-letter'
         variants={disabled ? undefined : letterAnimation}
         key={id}
       >
@@ -50,12 +51,12 @@ export const AnimatedLetters = ({
       </motion.span>
     ))}
   </motion.span>
-)
+);
 
 export const HeroTopRow = ({ title }: { title: string }) => {
   return (
     <div className={'hero-row'}>
-      <div className="row-col">
+      <div className='row-col'>
         <AnimatedLetters title={title} disabled={false} />
       </div>
       <motion.div
@@ -66,20 +67,20 @@ export const HeroTopRow = ({ title }: { title: string }) => {
           duration: 1,
           delay: 0.4,
         }}
-        className="row-col"
+        className='row-col'
       >
-        <span className="row-message">
+        <span className='row-message'>
           What is a man, but the sum of his memories?
         </span>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
 export const HeroBottomRow = ({ title }: { title: string }) => {
   return (
     <div className={'hero-row center'}>
       <AnimatedLetters title={title} disabled={false} />
     </div>
-  )
-}
+  );
+};

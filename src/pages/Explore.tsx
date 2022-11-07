@@ -1,40 +1,41 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import React from 'react';
 
 const exploreAnim = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  initial: { opacity: 0, y: 300 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
-}
+};
 
 const Explore = (): React.ReactElement => {
   return (
     <motion.div
-      className="transition-image final"
+      className='transition-image final'
       variants={exploreAnim}
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      initial='initial'
+      animate='animate'
+      exit='exit'
     >
       <motion.img
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
         src={`/images/image-2.jpg`}
-        layoutId="main-image-1"
+        layoutId='main-image-1'
       />
       <motion.div
-        className="explore"
+        className='explore'
         initial={{ opacity: 0, y: 100 }}
-        animate={{
+        whileInView={{
           opacity: 1,
           y: 0,
-          transition: { ease: 'easeInOut', duration: 1.2, delay: 0.8 },
+          transition: { ease: 'easeInOut', duration: 0.5 },
         }}
         exit={{ opacity: 0 }}
       >
-        <h1 className="subtitle">A curated memory box.</h1>
+        <h1 className='subtitle'>A curated memory box.</h1>
         <Link to={{ pathname: '/gallery' }}>
           <motion.div
-            className="explore-btn"
+            className='explore-btn'
             whileHover={{
               color: '#bf8041',
               backgroundColor: '#24242a',
@@ -50,7 +51,7 @@ const Explore = (): React.ReactElement => {
         </Link>
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Explore
+export default Explore;

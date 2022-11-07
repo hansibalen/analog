@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const Navbar = (): React.ReactElement => {
   return (
@@ -11,35 +12,35 @@ const Navbar = (): React.ReactElement => {
         duration: 1,
         delay: 0.6,
       }}
-      className="header"
+      className='header'
     >
-      <div className="header-inner">
-        <div className="logo">
-          <a href="/" className="nav-logo">
+      <div className='header-inner'>
+        <div className='logo'>
+          <a href='/' className='nav-logo'>
             hb
           </a>
         </div>
-        <nav className="nav">
+        <nav className='nav'>
           <li>
-            <Link to="/">Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to="/gallery">Gallery</Link>
+            <Link to='/gallery'>Gallery</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to='/about'>About</Link>
           </li>
         </nav>
-        <div className="contact">
-          <a href="/contact">(Icon Placeholders)</a>
+        <div className='contact'>
+          <a href='/contact'>(Icon Placeholders)</a>
         </div>
-        <div className="hamburger-menu">
+        <div className='hamburger-menu'>
           <span></span>
           <span></span>
         </div>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

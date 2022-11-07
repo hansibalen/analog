@@ -1,7 +1,7 @@
-/* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from './Image'
-import { motion } from 'framer-motion'
+import Image from './Image';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const ImageBlock = ({
   posX,
@@ -9,10 +9,10 @@ const ImageBlock = ({
   variants,
   id,
 }: {
-  posX?: number
-  posY?: number
-  variants: any
-  id: string
+  posX?: number;
+  posY?: number;
+  variants: any;
+  id: string;
 }) => {
   return (
     <motion.div
@@ -30,7 +30,7 @@ const ImageBlock = ({
         type={'image/webp'}
       />
     </motion.div>
-  )
-}
+  );
+};
 
-export default ImageBlock
+export default ImageBlock;
