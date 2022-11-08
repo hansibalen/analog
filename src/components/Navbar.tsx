@@ -60,7 +60,6 @@ const Navbar = (): React.ReactElement => {
         <motion.div
           variants={mobile}
           animate={isOpen ? 'animate' : 'exit'}
-          exit={!isOpen ? 'animate' : 'initial'}
           className={'mobile-' + (isOpen ? 'show' : 'hide')}
         >
           <motion.div
