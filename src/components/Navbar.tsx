@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
@@ -9,6 +9,8 @@ const highlight = {
 };
 
 const Navbar = (): React.ReactElement => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -180 }}
@@ -53,8 +55,24 @@ const Navbar = (): React.ReactElement => {
             <img src={require('@assets/svg/instagram.svg')} />
           </a>
         </div>
-        <div className='hamburger-icon'>
+        <div
+          className='hamburger-icon'
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
           <Hamburger size={25} easing='ease-in' duration={0.4} />
+        </div>
+        <div
+          className={'mobile-show' + (navbarOpen ? ' flex' : ' mobile-hide')}
+        >
+          <motion.li whileTap={highlight}>
+            <NavLink to='/'>Home</NavLink>
+          </motion.li>
+          <motion.li whileTap={highlight}>
+            <NavLink to='/gallery'>Gallery</NavLink>
+          </motion.li>
+          <motion.li whileTap={highlight}>
+            <NavLink to='/about'>About</NavLink>
+          </motion.li>
         </div>
       </div>
     </motion.div>

@@ -78,3 +78,19 @@
     }
   }
 }
+
+.mobile-hide {
+  display: none;
+}
+
+.mobile-show {
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-show li,
+a {
+  list-style: none;
+  text-decoration: none;
+  flex-direction: column;
+}
