@@ -86,7 +86,7 @@
     z-index: -100;
     @media (max-width: $layout-breakpoint-xsmall) {
       top: -56px;
-      height: 1vh;
+      height: 100%;
     }
     img {
       width: 100%;

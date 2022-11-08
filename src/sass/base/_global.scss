@@ -1,6 +1,9 @@
 body {
   background: $background;
   overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: auto;
 }
 
 ::-webkit-scrollbar {

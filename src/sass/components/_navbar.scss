@@ -71,6 +71,7 @@
         }
       }
     }
+    // Mobile menu
     .hamburger-icon {
       z-index: 200;
       @media (min-width: $layout-breakpoint-small) {
@@ -79,28 +80,33 @@
     }
   }
 }
-
 .mobile-hide {
   display: none;
 }
-
 .mobile-show {
-  background-color: $gold;
-  font-size: 2rem;
+  background: $gold;
+  font-size: 4rem;
   z-index: 150;
-  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
 .mobile-show li,
 a {
   list-style: none;
   text-decoration: none;
+  color: $black;
 }
-
 .mobile-items {
-  display: block;
+  display: flex;
   gap: 50px;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
