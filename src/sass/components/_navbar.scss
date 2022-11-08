@@ -27,7 +27,7 @@
         flex: 4;
       }
     }
-    .nav {
+    nav {
       @media (max-width: $layout-breakpoint-small) {
         display: none;
       }
@@ -47,6 +47,9 @@
           white-space: nowrap;
         }
       }
+    }
+    nav a.active {
+      color: $gold;
     }
     .nav-logo {
       text-decoration: none;

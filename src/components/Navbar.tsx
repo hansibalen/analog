@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 
@@ -21,16 +21,31 @@ const Navbar = (): React.ReactElement => {
             hb
           </a>
         </div>
-        <nav className='nav'>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/gallery'>Gallery</Link>
-          </li>
-          <li>
-            <Link to='/about'>About</Link>
-          </li>
+        <nav>
+          <motion.li
+            whileTap={{
+              scale: 0.8,
+              transition: { ease: 'easeIn' },
+            }}
+          >
+            <NavLink to='/'>Home</NavLink>
+          </motion.li>
+          <motion.li
+            whileTap={{
+              scale: 0.8,
+              transition: { ease: 'easeIn' },
+            }}
+          >
+            <NavLink to='/gallery'>Gallery</NavLink>
+          </motion.li>
+          <motion.li
+            whileTap={{
+              scale: 0.8,
+              transition: { ease: 'easeIn' },
+            }}
+          >
+            <NavLink to='/about'>About</NavLink>
+          </motion.li>
         </nav>
         <div className='contact'>
           <a
