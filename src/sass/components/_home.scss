@@ -1,6 +1,8 @@
 .hero {
   z-index: 100;
   position: relative;
+  display: flex;
+  flex-direction: column;
   .hero-row {
     overflow: hidden;
     display: flex;
