@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
-
-const highlight = {
-  scale: 0.8,
-  transition: { ease: 'easeIn' },
-};
+import NavbarLinks from './NavbarLinks';
 
 const Navbar = (): React.ReactElement => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <motion.div
@@ -29,15 +24,7 @@ const Navbar = (): React.ReactElement => {
           </a>
         </div>
         <nav>
-          <motion.li whileTap={highlight}>
-            <NavLink to='/'>Home</NavLink>
-          </motion.li>
-          <motion.li whileTap={highlight}>
-            <NavLink to='/gallery'>Gallery</NavLink>
-          </motion.li>
-          <motion.li whileTap={highlight}>
-            <NavLink to='/about'>About</NavLink>
-          </motion.li>
+          <NavbarLinks />
         </nav>
         <div className='contact'>
           <a
@@ -55,24 +42,19 @@ const Navbar = (): React.ReactElement => {
             <img src={require('@assets/svg/instagram.svg')} />
           </a>
         </div>
-        <div
-          className='hamburger-icon'
-          onClick={() => setNavbarOpen(!navbarOpen)}
-        >
-          <Hamburger size={25} easing='ease-in' duration={0.4} />
+        <div className='hamburger-icon'>
+          <Hamburger
+            size={25}
+            easing='ease-in'
+            duration={0.4}
+            toggled={isOpen}
+            toggle={setOpen}
+          />
         </div>
-        <div
-          className={'mobile-show' + (navbarOpen ? ' flex' : ' mobile-hide')}
-        >
-          <motion.li whileTap={highlight}>
-            <NavLink to='/'>Home</NavLink>
-          </motion.li>
-          <motion.li whileTap={highlight}>
-            <NavLink to='/gallery'>Gallery</NavLink>
-          </motion.li>
-          <motion.li whileTap={highlight}>
-            <NavLink to='/about'>About</NavLink>
-          </motion.li>
+        <div className={'mobile-' + (isOpen ? 'show' : 'hide')}>
+          <div className='mobile-items'>
+            <NavbarLinks />
+          </div>
         </div>
       </div>
     </motion.div>

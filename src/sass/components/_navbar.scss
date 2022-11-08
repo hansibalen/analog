@@ -72,6 +72,7 @@
       }
     }
     .hamburger-icon {
+      z-index: 200;
       @media (min-width: $layout-breakpoint-small) {
         display: none;
       }
@@ -84,13 +85,22 @@
 }
 
 .mobile-show {
-  align-items: center;
-  justify-content: center;
+  background-color: $gold;
+  font-size: 2rem;
+  z-index: 150;
+  position: absolute;
 }
 
 .mobile-show li,
 a {
   list-style: none;
   text-decoration: none;
+}
+
+.mobile-items {
+  display: block;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
