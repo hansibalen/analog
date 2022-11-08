@@ -14,7 +14,7 @@
     height: 96px;
     font-size: 1.2rem;
   }
-  .header-inner {
+  .header-content {
     width: 100%;
     display: flex;
     align-items: center;
@@ -54,12 +54,12 @@
     }
     .contact {
       @media (max-width: $layout-breakpoint-medium) {
+        display: flex;
+        flex-direction: row;
       }
       a {
         color: $black;
-        text-decoration: none;
         white-space: nowrap;
-        margin-right: 2rem;
         &:first-child {
           margin-right: 15px;
         }
@@ -68,21 +68,9 @@
         }
       }
     }
-    .hamburger-menu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      cursor: pointer;
+    .hamburger-icon {
       @media (min-width: $layout-breakpoint-small) {
         display: none;
-      }
-      span {
-        width: 20px;
-        height: 3px;
-        margin: 2px 0;
-        background: $black;
-        display: block;
       }
     }
   }

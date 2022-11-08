@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
-import ImgBlock from './ImageBlock';
+import ImageBlock from './ImageBlock';
 
 const container = {
   show: {
@@ -55,18 +55,18 @@ const Loader = ({ setLoading }: { setLoading: any }): React.ReactElement => {
         initial='hidden'
         animate='show'
         exit='exit'
-        className='loader-inner'
+        className='loader-content'
       >
-        <ImgBlock variants={item} id='image-1' />
+        <ImageBlock variants={item} id='image-1' />
         <motion.div variants={itemMain} className='transition-image'>
           <motion.img
             layoutId='main-image-1'
             src={require('@assets/images/image-2.jpg')}
           />
         </motion.div>
-        <ImgBlock variants={item} id='image-3' />
-        <ImgBlock variants={item} id='image-4' />
-        <ImgBlock variants={item} id='image-5' />
+        <ImageBlock variants={item} id='image-3' />
+        <ImageBlock variants={item} id='image-4' />
+        <ImageBlock variants={item} id='image-5' />
       </motion.div>
     </motion.div>
   );

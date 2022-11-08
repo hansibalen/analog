@@ -1,12 +1,8 @@
-import {
-  TabTitle,
-  hero,
-  HeroTopRow,
-  HeroBottomRow,
-} from '../../utils/GeneralFunctions';
+import { TabTitle } from '../../utils/GeneralFunctions';
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Explore from './Explore';
+import { hero, HeroTopRow, HeroBottomRow } from '../components/TextAnimation';
+import CTA from '../components/CTA';
 
 const Home = (): React.ReactElement => {
   TabTitle('HB Analogue - Home');
@@ -18,7 +14,7 @@ const Home = (): React.ReactElement => {
     <motion.div className='hero' variants={hero} exit='exit'>
       <HeroTopRow title={'hansi'} />
       <HeroBottomRow title={'brahimasi'} />
-      <Explore />
+      <CTA />
     </motion.div>
   );
 };

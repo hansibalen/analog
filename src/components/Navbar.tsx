@@ -1,6 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import React from 'react';
 import { Squash as Hamburger } from 'hamburger-react';
 
 const Navbar = (): React.ReactElement => {
@@ -15,7 +15,7 @@ const Navbar = (): React.ReactElement => {
       }}
       className='header'
     >
-      <div className='header-inner'>
+      <div className='header-content'>
         <div className='logo'>
           <a href='/' className='nav-logo'>
             hb
@@ -33,10 +33,22 @@ const Navbar = (): React.ReactElement => {
           </li>
         </nav>
         <div className='contact'>
-          <a href='/contact'>Twitter</a>
-          <a href='/contact'>IG</a>
+          <a
+            href='https://twitter.com/hnsblnbrg'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src={require('@assets/svg/twitter.svg')} />
+          </a>
+          <a
+            href='https://twitter.com/hnsblnbrg'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src={require('@assets/svg/instagram.svg')} />
+          </a>
         </div>
-        <div className='hamburger-menu'>
+        <div className='hamburger-icon'>
           <Hamburger size={25} easing='ease-out' />
         </div>
       </div>

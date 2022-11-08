@@ -8,7 +8,7 @@ const exploreAnim = {
   exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
 };
 
-const Explore = (): React.ReactElement => {
+const CTA = (): React.ReactElement => {
   return (
     <motion.div
       className='transition-image final'
@@ -23,7 +23,7 @@ const Explore = (): React.ReactElement => {
         layoutId='main-image-1'
       />
       <motion.div
-        className='explore'
+        className='cta'
         initial={{ opacity: 0, y: 100 }}
         whileInView={{
           opacity: 1,
@@ -32,10 +32,10 @@ const Explore = (): React.ReactElement => {
         }}
         exit={{ opacity: 0 }}
       >
-        <h1 className='subtitle'>A curated memory box.</h1>
+        <h1 className='cta-title'>A curated memory box.</h1>
         <Link to={{ pathname: '/gallery' }}>
           <motion.div
-            className='explore-btn'
+            className='cta-btn'
             whileHover={{
               color: '#bf8041',
               backgroundColor: '#24242a',
@@ -54,4 +54,4 @@ const Explore = (): React.ReactElement => {
   );
 };
 
-export default Explore;
+export default CTA;
