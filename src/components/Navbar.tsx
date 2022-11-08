@@ -5,8 +5,12 @@ import NavbarLinks from './NavbarLinks';
 
 const mobile = {
   initial: { opacity: 0, y: -300 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeIn' } },
-  exit: { opacity: 0, y: -300, transition: { duration: 0.5, ease: 'easeIn' } },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  },
+  exit: { opacity: 0, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
 };
 
 const Navbar = (): React.ReactElement => {
@@ -56,6 +60,7 @@ const Navbar = (): React.ReactElement => {
         <motion.div
           variants={mobile}
           animate={isOpen ? 'animate' : 'exit'}
+          exit={!isOpen ? 'animate' : 'initial'}
           className={'mobile-' + (isOpen ? 'show' : 'hide')}
         >
           <motion.div

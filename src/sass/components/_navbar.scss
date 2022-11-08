@@ -84,7 +84,10 @@
   display: none;
 }
 .mobile-show {
-  background: $gold;
+  background: rgba(0, 0, 0, 0.37);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
   font-size: 4rem;
   z-index: 150;
   min-width: 100%;
@@ -97,12 +100,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+  list-style: none;
 }
-.mobile-show li,
-a {
+.mobile-show a {
   list-style: none;
   text-decoration: none;
-  color: $black;
+  color: $white;
 }
 .mobile-items {
   display: flex;
