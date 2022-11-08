@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { Squash as Hamburger } from 'hamburger-react';
 
 const Navbar = (): React.ReactElement => {
   return (
@@ -32,11 +33,11 @@ const Navbar = (): React.ReactElement => {
           </li>
         </nav>
         <div className='contact'>
-          <a href='/contact'>(Icon Placeholders)</a>
+          <a href='/contact'>Twitter</a>
+          <a href='/contact'>IG</a>
         </div>
         <div className='hamburger-menu'>
-          <span></span>
-          <span></span>
+          <Hamburger size={25} easing='ease-out' />
         </div>
       </div>
     </motion.div>
