@@ -54,7 +54,7 @@ const Navbar = (): React.ReactElement => {
           </a>
         </div>
         <div className='hamburger-icon'>
-          <Hamburger size={25} easing='ease-out' />
+          <Hamburger size={25} easing='ease-in' duration={0.4} />
         </div>
       </div>
     </motion.div>
