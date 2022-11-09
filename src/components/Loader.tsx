@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
-import ImageBlock from './ImageBlock';
+import ImageBlock from './image/ImageBlock';
 
 const container = {
   show: {

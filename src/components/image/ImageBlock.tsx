@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from './Image';
-import { motion } from 'framer-motion';
 import React from 'react';
+import { motion } from 'framer-motion';
+import Image from './Image';
 
 const ImageBlock = ({
   posX,

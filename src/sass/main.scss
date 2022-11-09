@@ -3,9 +3,10 @@
 @import 'base/reset';
 @import 'base/typography';
 
-@import 'components/navbar';
-@import 'components/home';
 @import 'components/loader';
 @import 'components/cta';
-@import 'components/gallery';
-@import 'components/about';
+@import 'components/navbar';
+
+@import 'pages/home';
+@import 'pages/gallery';
+@import 'pages/about';

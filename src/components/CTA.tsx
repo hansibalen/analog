@@ -1,6 +1,6 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 const exploreAnim = {
   initial: { opacity: 0, y: 300 },
