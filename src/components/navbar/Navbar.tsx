@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import NavbarLinks from './NavbarLinks';
 
 const mobile = {
-  initial: { opacity: 0, y: -300 },
-  animate: {
+  open: {
     opacity: 1,
-    y: 0,
     transition: { duration: 0.5, ease: 'easeInOut' },
   },
-  exit: { opacity: 0, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
+  closed: {
+    opacity: 0,
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  },
 };
 
 const Navbar = (): React.ReactElement => {
@@ -46,21 +47,25 @@ const Navbar = (): React.ReactElement => {
             toggle={setOpen}
           />
         </div>
-        <motion.div
-          variants={mobile}
-          animate={isOpen ? 'animate' : 'exit'}
-          className={'mobile-' + (isOpen ? 'show' : 'hide')}
-        >
-          <motion.div
-            variants={mobile}
-            initial='initial'
-            animate='animate'
-            className='mobile-items'
-            onClick={() => setOpen(false)}
-          >
-            <NavbarLinks />
-          </motion.div>
-        </motion.div>
+        <AnimatePresence mode='wait'>
+          {isOpen && (
+            <motion.div
+              key={'box'}
+              variants={mobile}
+              initial={'closed'}
+              animate={'open'}
+              exit={'closed'}
+              className={'mobile-' + (isOpen ? 'show' : 'hide')}
+            >
+              <motion.div
+                className='mobile-items'
+                onClick={() => setOpen(false)}
+              >
+                <NavbarLinks />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
