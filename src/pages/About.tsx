@@ -45,20 +45,33 @@ const About = (): React.ReactElement => {
       exit='exit'
       className='about-container'
     >
-      <motion.div variants={children}>
-        <h1>Hey there!</h1>
-      </motion.div>
-      <motion.div variants={children} className='about-intro'>
+      <motion.h1 variants={children}>Hey there.</motion.h1>
+      <motion.p variants={children} className='about-intro'>
+        I&apos;m Hansi, an analogue photography enthusiast, and have been so for
+        the last 8 years now.
+      </motion.p>
+      <motion.p variants={children} className='about-intro italic'>
+        Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
+        the craft.
+      </motion.p>
+      <motion.div variants={children} className='about-intro right'>
         <p>
-          I&apos;m Hansi, an analogue photography enthusiast, going for over 8
-          years now.
+          From discontinued to expired, I have shot over 100 different rolls of
+          film. This site is a celebration of the collective memories from the
+          first 100th.
         </p>
       </motion.div>
       <motion.div variants={children} className='about-intro right'>
-        <p>
-          Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
-          the craft.
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { ease: 'easeInOut', duration: 0.5 },
+          }}
+        >
+          Dedicated to you. The people.
+        </motion.p>
       </motion.div>
     </motion.div>
   );

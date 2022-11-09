@@ -1,23 +1,26 @@
 .about-container {
   display: flex;
-  margin-top: 4rem;
   flex-direction: column;
+  justify-content: flex-start;
+  min-height: 150vh;
   gap: 50px;
   padding: 0 108px;
   & p {
     font-size: 4rem;
     line-height: 4.5rem;
-    width: 50%;
+    width: 45%;
   }
   @media (max-width: $layout-breakpoint-xsmall) {
     padding: 0 12px;
-    gap: 3rem;
+    gap: 2rem;
+    margin-top: 6rem;
     & p {
       width: 100%;
       font-size: 14px;
       line-height: 16px;
     }
   }
+
   h1 {
     font-size: 7rem;
     font-weight: 600;
@@ -27,9 +30,11 @@
     }
   }
   .about-intro {
-    display: flex;
-    flex-direction: row;
+    &.italic {
+      font-style: italic;
+    }
     &.right {
+      display: flex;
       justify-content: flex-end;
     }
   }
