@@ -48,7 +48,8 @@
         }
       }
     }
-    nav a.active {
+    nav a.active,
+    .mobile-show a.active {
       color: $gold;
     }
     .nav-logo {
@@ -106,9 +107,6 @@
   list-style: none;
   text-decoration: none;
   color: $black;
-}
-.mobile-show a.active {
-  color: $gold;
 }
 .mobile-items {
   display: flex;
