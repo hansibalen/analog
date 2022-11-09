@@ -1,9 +1,9 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 50px;
   padding: 0 108px;
+  min-height: 150vh;
   & p {
     font-size: 4rem;
     line-height: 4.5rem;
@@ -13,6 +13,7 @@
     padding: 0 12px;
     gap: 2rem;
     margin-top: 6rem;
+    min-height: 0vh;
     & p {
       width: 100%;
       font-size: 14px;
