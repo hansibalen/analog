@@ -18,19 +18,19 @@
       line-height: 16px;
     }
   }
-}
-h1 {
-  font-size: 7rem;
-  font-weight: 600;
-  @media (max-width: $layout-breakpoint-xsmall) {
-    font-size: 3rem;
-    text-align: center;
+  h1 {
+    font-size: 7rem;
+    font-weight: 600;
+    @media (max-width: $layout-breakpoint-xsmall) {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
-}
-.about-intro {
-  display: flex;
-  flex-direction: row;
-  &.right {
-    justify-content: flex-end;
+  .about-intro {
+    display: flex;
+    flex-direction: row;
+    &.right {
+      justify-content: flex-end;
+    }
   }
 }
