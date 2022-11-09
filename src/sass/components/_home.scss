@@ -80,6 +80,9 @@
   img {
     width: 800px;
     display: flex;
+    @media (max-width: $layout-breakpoint-xsmall) {
+      width: 300px;
+    }
   }
   &.final {
     display: block;
