@@ -54,14 +54,12 @@ const About = (): React.ReactElement => {
         Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
         the craft.
       </motion.p>
-      <motion.div variants={children} className='about-intro right'>
-        <p>
-          From discontinued to expired, I have shot over 100 different rolls of
-          film. This site is a celebration of the collective memories from the
-          first 100th.
-        </p>
-      </motion.div>
-      <motion.div variants={children} className='about-intro right'>
+      <motion.p variants={children}>
+        From discontinued to expired, I have shot over 100 different rolls of
+        film. This site is a celebration of the collective memories from the
+        first 100th.
+      </motion.p>
+      <motion.div variants={children}>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
           whileInView={{
