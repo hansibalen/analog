@@ -33,19 +33,8 @@ const Navbar = (): React.ReactElement => {
           <NavbarLinks />
         </nav>
         <div className='contact'>
-          <a
-            href='https://twitter.com/hnsblnbrg'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img src={require('@assets/svg/twitter.svg')} />
-          </a>
-          <a
-            href='https://twitter.com/hnsblnbrg'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <img src={require('@assets/svg/instagram.svg')} />
+          <a href='/cheeky' target='_blank' rel='noopener noreferrer'>
+            [wsg] - tba
           </a>
         </div>
         <div className='hamburger-icon'>

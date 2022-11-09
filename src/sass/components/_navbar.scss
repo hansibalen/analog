@@ -62,8 +62,11 @@
         flex-direction: row;
       }
       a {
-        color: $black;
+        color: $disabled;
         white-space: nowrap;
+        text-decoration: none;
+        cursor: default;
+        pointer-events: none;
         &:first-child {
           margin-right: 15px;
         }
