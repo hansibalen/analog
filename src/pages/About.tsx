@@ -24,7 +24,7 @@ const container = {
 const children = {
   hidden: {
     opacity: 0,
-    y: 300,
+    y: 50,
   },
   show: {
     opacity: 1,
