@@ -1,59 +1,23 @@
 .about-container {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  gap: 30px;
-  padding: 0 108px 100px 108px;
+  text-align: left;
+  gap: 20px;
+  padding: 0 108px;
+  justify-content: flex-start;
   & p {
-    font-size: 3.5rem;
-    line-height: 4rem;
-    width: 45%;
-  }
-  @media (max-width: $layout-breakpoint-large) {
-    gap: 30px;
-    & p {
-      font-size: 2.5rem;
-      line-height: 3rem;
-      width: 100%;
-    }
-  }
-  @media (max-width: $layout-breakpoint-medium) {
-    padding: 0 72px 0 72px;
-    & p {
-      font-size: 2rem;
-      line-height: 3rem;
-    }
-  }
-
-  @media (max-width: $layout-breakpoint-xsmall) {
-    padding: 0 12px;
-    gap: 2rem;
-    margin-top: 6rem;
-    min-height: 0vh;
-    & p {
-      width: 100%;
-      font-size: 14px;
-      line-height: 16px;
-    }
+    font-size: 2rem;
+    line-height: 3.2rem;
   }
 
   h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 600;
-    @media (max-width: $layout-breakpoint-medium) {
-      font-size: 4rem;
-    }
-    @media (max-width: $layout-breakpoint-xsmall) {
-      font-size: 3rem;
-      text-align: center;
-    }
   }
   .about-intro {
     &.italic {
       font-style: italic;
-    }
-    &.right {
-      display: flex;
-      justify-content: flex-end;
     }
   }
 }

@@ -36,7 +36,7 @@ const children = {
 };
 
 const About = (): React.ReactElement => {
-  TabTitle('HB Analogue - About');
+  TabTitle('analogue | About');
   return (
     <motion.div
       variants={container}
@@ -45,32 +45,22 @@ const About = (): React.ReactElement => {
       exit='exit'
       className='about-container'
     >
-      <motion.h1 variants={children}>Hey there.</motion.h1>
-      <motion.p variants={children} className='about-intro'>
-        I&apos;m Hansi, an analogue photography enthusiast, and have been so for
-        the last 8 years now.
-      </motion.p>
+      <motion.h1 variants={children}>A bit of a backstory.</motion.h1>
       <motion.p variants={children} className='about-intro italic'>
         Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
         the craft.
       </motion.p>
       <motion.p variants={children}>
-        From discontinued to expired, I have shot over 100 different rolls of
-        film. This site is a celebration of the collective memories from the
-        first 100th.
+        I have been in the game for over 8 years now. From discontinued to
+        expired, I have shot over 100 different rolls of film.
       </motion.p>
-      <motion.div variants={children}>
-        <motion.p
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { ease: 'easeInOut', duration: 0.5 },
-          }}
-        >
-          Dedicated to you. The people.
-        </motion.p>
-      </motion.div>
+      <motion.p variants={children}>
+        For my 100th roll milestone, I wanted to make something different.
+      </motion.p>
+      <motion.p variants={children}>
+        This website is dedicated to the collective memories made over the
+        years.
+      </motion.p>
     </motion.div>
   );
 };

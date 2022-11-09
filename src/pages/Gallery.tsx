@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 const Gallery = (): React.ReactElement => {
-  TabTitle('HB Analogue - Gallery');
+  TabTitle('analogue | Gallery');
   return (
     <motion.div
       initial={{ opacity: 0 }}
