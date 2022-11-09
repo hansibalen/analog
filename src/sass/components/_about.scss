@@ -1,0 +1,36 @@
+.about-container {
+  display: flex;
+  margin-top: 4rem;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 108px;
+  & p {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    width: 50%;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 12px;
+    gap: 3rem;
+    & p {
+      width: 100%;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+h1 {
+  font-size: 7rem;
+  font-weight: 600;
+  @media (max-width: $layout-breakpoint-xsmall) {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+.about-intro {
+  display: flex;
+  flex-direction: row;
+  &.right {
+    justify-content: flex-end;
+  }
+}
