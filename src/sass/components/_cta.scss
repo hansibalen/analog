@@ -15,6 +15,9 @@
   font-weight: 600;
   color: $black;
   text-decoration: none;
+  @media (max-width: $layout-breakpoint-large) {
+    font-size: 6rem;
+  }
   @media (max-width: $layout-breakpoint-medium) {
     font-size: 5rem;
   }

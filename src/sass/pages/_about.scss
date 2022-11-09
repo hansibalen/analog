@@ -1,14 +1,31 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding: 0 108px;
-  min-height: 150vh;
+  gap: 55px;
+  padding: 0 108px 100px 108px;
   & p {
-    font-size: 4rem;
-    line-height: 4.5rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
     width: 45%;
   }
+  @media (max-width: $layout-breakpoint-large) {
+    gap: 30px;
+    & p {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      width: 50%;
+    }
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    padding: 0 72px 0 72px;
+    gap: 30px;
+    & p {
+      width: 100%;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
   @media (max-width: $layout-breakpoint-xsmall) {
     padding: 0 12px;
     gap: 2rem;
@@ -24,6 +41,9 @@
   h1 {
     font-size: 7rem;
     font-weight: 600;
+    @media (max-width: $layout-breakpoint-medium) {
+      font-size: 4rem;
+    }
     @media (max-width: $layout-breakpoint-xsmall) {
       font-size: 3rem;
       text-align: center;

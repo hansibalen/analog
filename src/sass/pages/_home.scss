@@ -17,7 +17,7 @@
     &.center {
       justify-content: center;
       text-align: center;
-      @media (max-width: $layout-breakpoint-medium) {
+      @media (max-width: $layout-breakpoint-large) {
         margin-bottom: 4rem;
       }
       @media (max-width: $layout-breakpoint-small) {
@@ -41,7 +41,7 @@
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;
-      @media (max-width: $layout-breakpoint-medium) {
+      @media (max-width: $layout-breakpoint-large) {
         font-size: 18rem;
       }
       @media (max-width: $layout-breakpoint-small) {

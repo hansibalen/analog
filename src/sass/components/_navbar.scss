@@ -28,7 +28,7 @@
       }
     }
     nav {
-      @media (max-width: $layout-breakpoint-small) {
+      @media (max-width: $layout-breakpoint-medium) {
         display: none;
       }
       display: flex;
@@ -67,7 +67,7 @@
         &:first-child {
           margin-right: 15px;
         }
-        @media (max-width: $layout-breakpoint-small) {
+        @media (max-width: $layout-breakpoint-medium) {
           display: none;
         }
       }
@@ -75,7 +75,7 @@
     // Mobile menu
     .hamburger-icon {
       z-index: 200;
-      @media (min-width: $layout-breakpoint-small) {
+      @media (min-width: 961px) {
         display: none;
       }
     }
