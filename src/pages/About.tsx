@@ -35,8 +35,24 @@ const children = {
   },
 };
 
+const contact = {
+  hover: {
+    color: '#bf8041',
+    transition: { ease: 'easeInOut', duration: 0.3 },
+  },
+  tap: { scale: 0.8, transition: { ease: 'easeIn' } },
+};
+
 const About = (): React.ReactElement => {
   TabTitle('analogue | About');
+
+  const socials = [
+    { path: 'https://twitter.com/hnsblnbrg', title: 'Twitter' },
+    { path: 'https://instagram.com/hansi.brahimasi', title: 'Instagram' },
+    { path: 'https://www.youtube.com/@hansibal', title: 'YouTube' },
+    { path: 'https://letterboxd.com/hansibrahimasi/', title: 'Letterboxd' },
+    { path: 'https://open.spotify.com/user/hansibal94', title: 'Spotify' },
+  ];
   return (
     <motion.div
       variants={container}
@@ -45,22 +61,41 @@ const About = (): React.ReactElement => {
       exit='exit'
       className='about-container'
     >
-      <motion.h1 variants={children}>A bit of a backstory.</motion.h1>
-      <motion.p variants={children} className='about-intro italic'>
-        Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
-        the craft.
-      </motion.p>
-      <motion.p variants={children}>
-        I have been in the game for over 8 years now. From discontinued to
-        expired, I have shot over 100 different rolls of film.
-      </motion.p>
-      <motion.p variants={children}>
-        For my 100th roll milestone, I wanted to make something different.
-      </motion.p>
-      <motion.p variants={children}>
-        This website is dedicated to the collective memories made over the
-        years.
-      </motion.p>
+      <div className='about-intro'>
+        <motion.h1 variants={children}>Some backstory.</motion.h1>
+        <motion.p variants={children}>
+          I have been in the game for over 8 years now. From discontinued to
+          expired, I have shot over 100 different rolls of film. For my 100th
+          roll milestone, I wanted to make something different. This website is
+          dedicated to the collective memories made over the years.
+        </motion.p>
+        <motion.p variants={children} className='about-intro italic'>
+          Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
+          the craft.
+        </motion.p>
+        <motion.h1 variants={children} className='social-title'>
+          What I&apos;m up to?
+        </motion.h1>
+        <motion.div variants={children} className='social-icon'>
+          {socials.map((link) => (
+            <motion.a
+              variants={contact}
+              whileHover='hover'
+              whileTap='tap'
+              href={link.path}
+              key={link.title}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              {link.title}↗
+            </motion.a>
+          ))}
+        </motion.div>
+      </div>
+      <motion.img
+        variants={children}
+        src={require('@assets/images/image-1.jpg')}
+      />
     </motion.div>
   );
 };

@@ -1,23 +1,109 @@
 .about-container {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   text-align: left;
-  gap: 20px;
+  height: 80vh;
+  max-width: 100%;
+  gap: 100px;
   padding: 0 108px;
-  justify-content: flex-start;
-  & p {
-    font-size: 2rem;
-    line-height: 3.2rem;
-  }
-
   h1 {
     font-size: 5rem;
     font-weight: 600;
   }
+  p {
+    font-size: 22px;
+    line-height: 3rem;
+  }
+  a {
+    font-size: 22px;
+    text-decoration: none;
+    color: $black;
+    font-weight: 400;
+  }
+
+  img {
+    max-width: 50%;
+  }
   .about-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
     &.italic {
       font-style: italic;
+      font-weight: 300;
+    }
+  }
+  .social-title {
+    margin-top: 5rem;
+  }
+  .social-icon {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  @media (max-width: $layout-breakpoint-large) {
+    gap: 25px;
+    padding: 0 72px;
+    justify-content: center;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 18px;
+      line-height: 2rem;
+    }
+    a {
+      font-size: 18px;
+    }
+
+    .social-title {
+      margin-top: 0rem;
+    }
+    .social-icon {
+      gap: 15px;
+      margin-bottom: 2rem;
+    }
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    a {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    flex-direction: column-reverse;
+    padding: 0 12px;
+    text-align: center;
+    p {
+      font-size: 16px;
+    }
+    .social-icon {
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 12px;
+    height: 80vh;
+    p {
+      text-align: left;
+    }
+    img {
+      display: none;
+    }
+    a {
+      font-size: 18px;
+    }
+    .social-title {
+      margin-top: 2rem;
+    }
+    .social-icon {
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }
