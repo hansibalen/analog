@@ -35,7 +35,7 @@ const Navbar = (): React.ReactElement => {
         </nav>
         <div className='contact'>
           <a href='/cheeky' target='_blank' rel='noopener noreferrer'>
-            [wsg] - tba
+            TBA
           </a>
         </div>
         <div className='hamburger-icon'>
