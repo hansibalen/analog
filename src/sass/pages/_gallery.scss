@@ -1,13 +1,23 @@
 .portfolio {
-  padding: 4rem 2rem 0 2rem;
+  padding: 20px 108px;
   -webkit-column-count: 3;
   -webkit-column-gap: 0px;
   -moz-column-count: 3;
   -moz-column-gap: 0px;
   column-count: 3;
-  column-gap: 5px;
+  column-gap: 10px;
   img {
     width: 100%;
-    height: auto;
+    max-height: 100%;
+    margin-bottom: 10px;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 20px 12px;
+    column-gap: 5px;
+    column-count: 1;
+
+    img {
+      margin-bottom: 5px;
+    }
   }
 }
