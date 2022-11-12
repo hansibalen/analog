@@ -69,7 +69,7 @@ const About = (): React.ReactElement => {
           roll milestone, I wanted to make something different. This website is
           dedicated to the collective memories made over the years.
         </motion.p>
-        <motion.p variants={children} className='about-intro italic'>
+        <motion.p variants={children} className='italic'>
           Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
           the craft.
         </motion.p>

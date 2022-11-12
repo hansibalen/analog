@@ -30,10 +30,10 @@
     flex-direction: column;
     gap: 25px;
     width: 100%;
-    &.italic {
-      font-style: italic;
-      font-weight: 300;
-    }
+  }
+  .italic {
+    font-style: italic;
+    font-weight: 300;
   }
   .social-title {
     margin-top: 5rem;
@@ -91,19 +91,18 @@
     gap: 25px;
     padding: 0 12px;
     height: 80vh;
-
     img {
       display: none;
     }
     a {
-      font-size: 18px;
+      font-size: 22px;
     }
-    .social-title {
-      margin-top: 2rem;
+    .about-intro {
+      margin-top: 5rem;
     }
     .social-icon {
       flex-direction: column;
-      gap: 20px;
+      gap: 25px;
       text-align: center;
     }
   }
