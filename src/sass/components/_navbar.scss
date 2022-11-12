@@ -1,10 +1,21 @@
-.header {
+nav {
   font-size: 1.8rem;
-  height: 156px;
+  height: 100px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 108px;
+  padding: 0px 108px;
   color: $black;
+  transition: 0.3s all;
+  &.sticky {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 200;
+    background-color: $background;
+    position: fixed;
+    animation-duration: 0.3s;
+    animation-name: smooth;
+  }
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
     font-size: 1.6rem;
@@ -13,6 +24,9 @@
     padding: 0 12px;
     height: 96px;
     font-size: 1.2rem;
+    &.sticky {
+      height: 96px;
+    }
   }
   .header-content {
     width: 100%;
@@ -27,7 +41,7 @@
         flex: 4;
       }
     }
-    nav {
+    .navigation {
       @media (max-width: $layout-breakpoint-medium) {
         display: none;
       }
@@ -48,7 +62,7 @@
         }
       }
     }
-    nav a.active,
+    .navigation a.active,
     .mobile-show a.active {
       color: $gold;
     }

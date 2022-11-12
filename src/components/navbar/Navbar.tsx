@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import NavbarLinks from './NavbarLinks';
@@ -16,13 +16,23 @@ const mobile = {
 
 const Navbar = (): React.ReactElement => {
   const [isOpen, setOpen] = useState(false);
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
 
   return (
-    <motion.div
+    <motion.nav
       initial={{ opacity: 0, y: -180 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -180 }}
       transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
-      className='header'
+      className={`${sticky ? 'sticky' : ''}`}
     >
       <div className='header-content'>
         <div className='logo'>
@@ -30,9 +40,9 @@ const Navbar = (): React.ReactElement => {
             hb
           </a>
         </div>
-        <nav>
+        <div className='navigation'>
           <NavbarLinks />
-        </nav>
+        </div>
         <div className='contact'>
           <a href='/cheeky' target='_blank' rel='noopener noreferrer'>
             TBA
@@ -67,7 +77,7 @@ const Navbar = (): React.ReactElement => {
           )}
         </AnimatePresence>
       </div>
-    </motion.div>
+    </motion.nav>
   );
 };
 
