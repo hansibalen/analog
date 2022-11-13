@@ -8,23 +8,21 @@ const highlight = {
 };
 
 const NavbarLinks = (): React.ReactElement => {
+  const navArray = [
+    { path: '/', title: 'Home' },
+    { path: '/gallery', title: 'Gallery' },
+    { path: '/about', title: 'About' },
+  ];
+
   return (
     <>
-      <motion.li whileTap={highlight}>
-        <NavLink to='/' aria-label='Home'>
-          Home
-        </NavLink>
-      </motion.li>
-      <motion.li whileTap={highlight}>
-        <NavLink to='/gallery' aria-label='Gallery'>
-          Gallery
-        </NavLink>
-      </motion.li>
-      <motion.li whileTap={highlight}>
-        <NavLink to='/about' aria-label='About'>
-          About
-        </NavLink>
-      </motion.li>
+      {navArray.map((link) => (
+        <motion.li whileTap={highlight} key={link.title}>
+          <NavLink to={link.path} aria-label={link.title}>
+            {link.title}
+          </NavLink>
+        </motion.li>
+      ))}
     </>
   );
 };
