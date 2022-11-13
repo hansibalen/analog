@@ -64,13 +64,14 @@ const About = (): React.ReactElement => {
       <div className='about-intro'>
         <motion.h1 variants={children}>Some backstory.</motion.h1>
         <motion.p variants={children}>
-          I have been in the game for over 8 years now. From discontinued to
-          expired, I have shot over 100 different rolls of film. For my 100th
-          roll milestone, I wanted to make something different. This website is
-          dedicated to the collective memories made over the years.
+          I have been a film photography enthusiast for the better part of 8
+          years now. Throughout this time frame, I have had the opportunity to
+          shoot a variety of rolls, from expired to discontinued brands.
+          Recently I shot my 100th film roll. So, to celebrate the milestone, I
+          built this website.
         </motion.p>
         <motion.p variants={children} className='italic'>
-          Inspired by René Burri, Greg Girard and Sebastião Salgado, legends of
+          Inspired by René Burri, Greg Girard & Sebastião Salgado, legends of
           the craft.
         </motion.p>
         <motion.h1 variants={children} className='social-title'>
