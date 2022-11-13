@@ -10,11 +10,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    @media (max-width: $layout-breakpoint-medium) {
-      &:first-child {
-        margin-top: 1.5rem;
-      }
-    }
     &.center {
       justify-content: center;
       text-align: center;

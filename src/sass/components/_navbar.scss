@@ -62,7 +62,7 @@ nav {
         }
       }
     }
-    .navigation a.active,
+    ul a.active,
     .mobile-show a.active {
       color: $gold;
     }
@@ -122,15 +122,15 @@ nav {
   left: 0;
   right: 0;
   list-style: none;
+  ul {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-self: center;
+  }
 }
 .mobile-show a {
   list-style: none;
   text-decoration: none;
   color: $black;
-}
-.mobile-items {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  flex-direction: column;
 }

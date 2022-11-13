@@ -21,6 +21,7 @@ const CTA = (): React.ReactElement => {
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
         src={require('@assets/images/loader/image-2.jpg')}
         layoutId='main-image-1'
+        alt='transition hero image'
       />
       <motion.div
         className='cta'

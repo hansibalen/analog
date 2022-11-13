@@ -40,9 +40,9 @@ const Navbar = (): React.ReactElement => {
             hb
           </a>
         </div>
-        <div className='navigation'>
+        <ul className='navigation'>
           <NavbarLinks />
-        </div>
+        </ul>
         <div className='contact'>
           <a
             href='/cheeky'
@@ -74,12 +74,9 @@ const Navbar = (): React.ReactElement => {
               exit={'closed'}
               className={'mobile-' + (isOpen ? 'show' : 'hide')}
             >
-              <motion.div
-                className='mobile-items'
-                onClick={() => setOpen(false)}
-              >
+              <ul onClick={() => setOpen(false)}>
                 <NavbarLinks />
-              </motion.div>
+              </ul>
             </motion.div>
           )}
         </AnimatePresence>
