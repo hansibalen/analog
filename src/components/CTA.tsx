@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const exploreAnim = {
+const ctaAnimation = {
   initial: { opacity: 0, y: 300 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
@@ -12,14 +12,14 @@ const CTA = (): React.ReactElement => {
   return (
     <motion.div
       className='transition-image final'
-      variants={exploreAnim}
+      variants={ctaAnimation}
       initial='initial'
       animate='animate'
       exit='exit'
     >
       <motion.img
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-        src={require('@assets/images/image-2.jpg')}
+        src={require('@assets/images/loader/image-2.jpg')}
         layoutId='main-image-1'
       />
       <motion.div

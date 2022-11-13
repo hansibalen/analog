@@ -48,6 +48,7 @@ const Navbar = (): React.ReactElement => {
             TBA
           </a>
         </div>
+        {/* Mobile menu */}
         <div className='hamburger-icon'>
           <Hamburger
             size={25}

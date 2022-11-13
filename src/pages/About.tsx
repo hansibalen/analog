@@ -94,7 +94,7 @@ const About = (): React.ReactElement => {
       </div>
       <motion.img
         variants={children}
-        src={require('@assets/images/image-1.jpg')}
+        src={require('@assets/images/loader/image-1.jpg')}
       />
     </motion.div>
   );

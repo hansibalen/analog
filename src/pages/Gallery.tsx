@@ -34,7 +34,7 @@ const Gallery = (): React.ReactElement => {
         {galleryArray.map((img) => (
           <motion.img
             key={img.id}
-            src={require(`@assets/gallery/image-${img.id}.jpg`)}
+            src={require(`@assets/images/gallery/image-${img.id}.jpg`)}
             loading='lazy'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{

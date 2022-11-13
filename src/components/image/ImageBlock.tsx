@@ -24,8 +24,8 @@ const ImageBlock = ({
       }}
     >
       <Image
-        src={require(`@assets/images/${id}.webp`)}
-        fallback={`@assets/images/${id}.jpg`}
+        src={require(`@assets/images/loader/${id}.webp`)}
+        fallback={`@assets/images/loader/${id}.jpg`}
         alt={id}
         type={'image/webp'}
       />

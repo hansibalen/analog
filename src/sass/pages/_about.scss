@@ -11,12 +11,12 @@
     font-size: 5rem;
     font-weight: 600;
   }
-  p {
-    font-size: 22px;
+  p,
+  a {
+    font-size: 2.2rem;
     line-height: 3rem;
   }
   a {
-    font-size: 22px;
     text-decoration: none;
     color: $black;
     font-weight: 400;
@@ -49,14 +49,11 @@
     h1 {
       font-size: 3rem;
     }
-    p {
-      font-size: 18px;
+    p,
+    a {
+      font-size: 1.8rem;
       line-height: 2rem;
     }
-    a {
-      font-size: 18px;
-    }
-
     .social-title {
       margin-top: 0rem;
     }
@@ -68,13 +65,13 @@
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
     a {
-      font-size: 15px;
+      font-size: 1.5rem;
     }
   }
   @media (max-width: $layout-breakpoint-small) {
     flex-direction: column;
     p {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
     h1 {
       text-align: center;
@@ -93,9 +90,8 @@
       display: none;
     }
     a {
-      font-size: 22px;
+      font-size: 2.2rem;
     }
-
     .social-icon {
       flex-direction: column;
       gap: 25px;
