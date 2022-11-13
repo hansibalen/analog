@@ -37,7 +37,7 @@ const children = {
 
 const contact = {
   hover: {
-    color: '#bf8041',
+    color: '#d4964b',
     transition: { ease: 'easeInOut', duration: 0.3 },
   },
   tap: { scale: 0.8, transition: { ease: 'easeIn' } },

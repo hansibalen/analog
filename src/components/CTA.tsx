@@ -37,7 +37,7 @@ const CTA = (): React.ReactElement => {
           <motion.div
             className='cta-btn'
             whileHover={{
-              color: '#bf8041',
+              color: '#d4964b',
               backgroundColor: '#24242a',
               transition: { ease: 'easeInOut', duration: 0.3 },
             }}
