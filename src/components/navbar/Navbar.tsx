@@ -36,7 +36,7 @@ const Navbar = (): React.ReactElement => {
     >
       <div className='header-content'>
         <div className='logo'>
-          <a href='/' className='nav-logo'>
+          <a href='/' className='nav-logo' aria-label='homepage logo'>
             hb
           </a>
         </div>
@@ -44,7 +44,12 @@ const Navbar = (): React.ReactElement => {
           <NavbarLinks />
         </div>
         <div className='contact'>
-          <a href='/cheeky' target='_blank' rel='noopener noreferrer'>
+          <a
+            href='/cheeky'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='to be announced btn'
+          >
             TBA
           </a>
         </div>
@@ -56,6 +61,7 @@ const Navbar = (): React.ReactElement => {
             duration={0.4}
             toggled={isOpen}
             toggle={setOpen}
+            aria-label='hamburger menu btn'
           />
         </div>
         <AnimatePresence mode='wait'>

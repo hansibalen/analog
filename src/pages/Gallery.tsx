@@ -35,6 +35,7 @@ const Gallery = (): React.ReactElement => {
           <motion.img
             key={img.id}
             src={require(`@assets/images/gallery/image-${img.id}.jpg`)}
+            alt={img.id}
             loading='lazy'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{

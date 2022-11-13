@@ -84,6 +84,7 @@ const About = (): React.ReactElement => {
               whileTap='tap'
               href={link.path}
               key={link.title}
+              aria-label={link.title}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -95,6 +96,7 @@ const About = (): React.ReactElement => {
       <motion.img
         variants={children}
         src={require('@assets/images/loader/image-1.jpg')}
+        alt='about-img-burial-ubahn'
       />
     </motion.div>
   );

@@ -33,7 +33,7 @@ const CTA = (): React.ReactElement => {
         exit={{ opacity: 0 }}
       >
         <h1 className='cta-title'>A curated memory box.</h1>
-        <Link to={{ pathname: '/gallery' }}>
+        <Link to={{ pathname: '/gallery' }} aria-label='Explore gallery'>
           <motion.div
             className='cta-btn'
             whileHover={{

@@ -11,13 +11,19 @@ const NavbarLinks = (): React.ReactElement => {
   return (
     <>
       <motion.li whileTap={highlight}>
-        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/' aria-label='Home'>
+          Home
+        </NavLink>
       </motion.li>
       <motion.li whileTap={highlight}>
-        <NavLink to='/gallery'>Gallery</NavLink>
+        <NavLink to='/gallery' aria-label='Gallery'>
+          Gallery
+        </NavLink>
       </motion.li>
       <motion.li whileTap={highlight}>
-        <NavLink to='/about'>About</NavLink>
+        <NavLink to='/about' aria-label='About'>
+          About
+        </NavLink>
       </motion.li>
     </>
   );
