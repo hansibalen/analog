@@ -89,7 +89,7 @@ const About = (): React.ReactElement => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              {link.title}↗
+              {link.title}
             </motion.a>
           ))}
         </motion.div>
