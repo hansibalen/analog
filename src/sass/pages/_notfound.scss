@@ -1,0 +1,56 @@
+.not-found {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+    p {
+      font-size: 5rem;
+    }
+    img {
+      width: 600px;
+    }
+    .btn {
+      border: 3px solid $black;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 5rem;
+      padding: 15px;
+      color: $black;
+      transition: 0.3s ease-in-out;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    }
+    .btn:hover {
+      color: $gold;
+      background-color: $black;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-xsmall) {
+  .not-found {
+    .content {
+      p {
+        font-size: 2rem;
+      }
+      img {
+        width: 300px;
+      }
+      .btn {
+        font-size: 3rem;
+        padding: 10px;
+        border-radius: 9px;
+        color: $gold;
+        background-color: $black;
+      }
+    }
+  }
+}

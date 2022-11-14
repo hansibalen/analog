@@ -9,6 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
+import NotFound from './pages/NotFound';
 import ScrollToTop from '../utils/ScrollToTop';
 
 const App = (): React.ReactElement => {
@@ -37,6 +38,7 @@ const App = (): React.ReactElement => {
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/gallery' element={<Gallery />} />
+                <Route path='*' element={<NotFound />} />
               </Routes>
             </AnimatePresence>
           </>
