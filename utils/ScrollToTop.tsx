@@ -9,7 +9,7 @@ export default function ScrollToTop(): any {
     document.documentElement.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'auto',
+      behavior: 'smooth',
     });
   }, [pathname]);
 
