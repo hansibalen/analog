@@ -29,9 +29,9 @@ const App = (): React.ReactElement => {
           </motion.div>
         ) : (
           <>
-            <ScrollToTop />
             <Navbar />
             <AnimatePresence mode='wait'>
+              <ScrollToTop />
               <Routes location={location} key={location.pathname}>
                 {!loading}
                 <Route path='/' element={<Home />} />
