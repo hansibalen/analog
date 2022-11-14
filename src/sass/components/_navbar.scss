@@ -12,9 +12,10 @@ nav {
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     z-index: 200;
     background-color: $background;
-    position: fixed;
     animation-duration: 0.3s;
     animation-name: smooth;
+    position: sticky;
+    top: 0;
   }
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
