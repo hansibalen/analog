@@ -9,6 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
+import ScrollToTop from '../utils/ScrollToTop';
 
 const App = (): React.ReactElement => {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ const App = (): React.ReactElement => {
           </motion.div>
         ) : (
           <>
+            <ScrollToTop />
             <Navbar />
             <AnimatePresence mode='wait'>
               <Routes location={location} key={location.pathname}>
