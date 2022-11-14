@@ -1,4 +1,4 @@
-import { TabTitle, galleryArray } from '../../utils/GeneralFunctions';
+import { TabTitle } from '../../utils/GeneralFunctions';
 import { motion } from 'framer-motion';
 import React from 'react';
 
@@ -23,6 +23,8 @@ const container = {
 
 const Gallery = (): React.ReactElement => {
   TabTitle('analogue | Gallery');
+  const array = [...Array(89).keys()];
+
   return (
     <motion.div
       variants={container}
@@ -31,11 +33,11 @@ const Gallery = (): React.ReactElement => {
       exit='exit'
     >
       <div className='portfolio'>
-        {galleryArray.map((img) => (
+        {array.map((id) => (
           <motion.img
-            key={img.id}
-            src={require(`@assets/images/gallery/image-${img.id}.jpg`)}
-            alt={img.id}
+            key={id}
+            src={require(`@assets/images/gallery/image-${id}.jpg`)}
+            alt={`image ${id}`}
             loading='lazy'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{
