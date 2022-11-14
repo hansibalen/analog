@@ -31,7 +31,7 @@ const Navbar = (): React.ReactElement => {
       initial={{ opacity: 0, y: -180 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -180 }}
-      transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+      transition={{ ease: 'easeInOut', duration: 1 }}
       className={`${sticky ? 'sticky' : ''}`}
     >
       <div className='header-content'>
