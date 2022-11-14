@@ -23,7 +23,7 @@ const container = {
 
 const Gallery = (): React.ReactElement => {
   TabTitle('analogue | Gallery');
-  const array = [...Array(89).keys()];
+  const array = [...Array(90).keys()];
 
   return (
     <motion.div
