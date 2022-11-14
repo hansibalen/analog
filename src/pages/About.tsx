@@ -61,44 +61,47 @@ const About = (): React.ReactElement => {
       exit='exit'
       className='about-container'
     >
-      <div className='about-intro'>
-        <motion.h1 variants={children}>Some backstory.</motion.h1>
-        <motion.p variants={children}>
-          I have been a film photography enthusiast for the better part of 8
-          years now. Throughout this time frame, I have had the opportunity of
-          shooting a variety of rolls, from expired to discontinued brands.
-          Recently I shot my 100th film roll. So, to celebrate the milestone, I
-          built this website.
-        </motion.p>
-        <motion.p variants={children} className='italic'>
-          Inspired by René Burri, Greg Girard & Sebastião Salgado, legends of
-          the craft.
-        </motion.p>
-        <motion.h1 variants={children} className='social-title'>
-          What I&apos;m up to?
-        </motion.h1>
-        <motion.div variants={children} className='social-icon'>
-          {socials.map((link) => (
-            <motion.a
-              variants={contact}
-              whileHover='hover'
-              whileTap='tap'
-              href={link.path}
-              key={link.title}
-              aria-label={link.title}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {link.title}
-            </motion.a>
-          ))}
-        </motion.div>
-      </div>
       <motion.img
         variants={children}
         src={require('@assets/images/meta.jpg')}
         alt='about-img-burial-ubahn'
       />
+      <div className='about-intro'>
+        <div className='about-text'>
+          <motion.h1 variants={children}>Some backstory.</motion.h1>
+          <motion.p variants={children}>
+            I have been a film photography enthusiast for the better part of 8
+            years now. Throughout this time frame, I have had the opportunity of
+            shooting a variety of rolls, from expired to discontinued brands.
+            Recently I shot my 100th film roll. So, to celebrate the milestone,
+            I built this website.
+          </motion.p>
+          <motion.p variants={children} className='italic'>
+            Inspired by René Burri, Greg Girard & Sebastião Salgado, legends of
+            the craft.
+          </motion.p>
+        </div>
+        <div className='about-text'>
+          <motion.h1 variants={children}>What I&apos;m up to?</motion.h1>
+          <motion.ul variants={children}>
+            {socials.map((link) => (
+              <li key={link.title}>
+                <motion.a
+                  variants={contact}
+                  whileHover='hover'
+                  whileTap='tap'
+                  href={link.path}
+                  aria-label={link.title}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {link.title}
+                </motion.a>
+              </li>
+            ))}
+          </motion.ul>
+        </div>
+      </div>
     </motion.div>
   );
 };

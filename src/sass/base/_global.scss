@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+}
+
 body {
   background: $background;
   overflow-x: hidden;

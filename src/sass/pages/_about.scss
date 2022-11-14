@@ -24,20 +24,18 @@
   img {
     max-width: 50%;
   }
-  .about-intro {
+  .about-intro,
+  .about-text {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     width: 100%;
   }
   .italic {
     font-style: italic;
     font-weight: 300;
   }
-  .social-title {
-    margin-top: 5rem;
-  }
-  .social-icon {
+  ul {
     display: flex;
     gap: 25px;
     justify-content: flex-start;
@@ -54,10 +52,7 @@
       font-size: 1.8rem;
       line-height: 2rem;
     }
-    .social-title {
-      margin-top: 0rem;
-    }
-    .social-icon {
+    ul {
       gap: 15px;
       margin-bottom: 2rem;
     }
@@ -65,7 +60,7 @@
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
     a {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
   @media (max-width: $layout-breakpoint-small) {
@@ -76,23 +71,22 @@
     h1 {
       text-align: center;
     }
-    .social-icon {
-      justify-content: center;
+    ul {
+      justify-content: space-evenly;
       gap: 20px;
+    }
+    img {
+      min-width: 100%;
     }
   }
   @media (max-width: $layout-breakpoint-xsmall) {
-    flex-direction: column;
-    gap: 25px;
+    justify-content: flex-start;
     padding: 0 12px;
-    height: 80vh;
-    img {
-      display: none;
-    }
+    margin-top: 2rem;
     a {
       font-size: 2.2rem;
     }
-    .social-icon {
+    ul {
       flex-direction: column;
       gap: 25px;
       text-align: center;
