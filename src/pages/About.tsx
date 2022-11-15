@@ -71,8 +71,8 @@ const About = (): React.ReactElement => {
           <motion.h1 variants={children}>Some backstory.</motion.h1>
           <motion.p variants={children}>
             I have been a film photography enthusiast for the better part of 8
-            years now. Throughout this time frame, I have had the opportunity of
-            shooting a variety of rolls, from expired to discontinued brands.
+            years now. Throughout this time frame, I have had the opportunity to
+            shoot a variety of rolls, from expired to discontinued brands.
             Recently I shot my 100th film roll. So, to celebrate the milestone,
             I built this website.
           </motion.p>
