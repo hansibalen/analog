@@ -10,7 +10,7 @@ const ctaAnimation = {
 
 const whileInView = {
   initial: { opacity: 0, y: 50 },
-  animate: {
+  view: {
     opacity: 1,
     y: 0,
     transition: { ease: 'easeInOut', duration: 0.5, delay: 0.3 },
@@ -57,7 +57,7 @@ const CTA = (): React.ReactElement => {
         className='cta'
         variants={whileInView}
         initial='initial'
-        whileInView='animate'
+        whileInView='view'
         exit='exit'
       >
         <h1 className='cta-title'>A curated memory box.</h1>
