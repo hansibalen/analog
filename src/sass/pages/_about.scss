@@ -20,6 +20,16 @@
     text-decoration: none;
     color: $black;
     font-weight: 400;
+    padding-bottom: 3px;
+    background-image: linear-gradient(#24242a 0 0);
+    background-position: 100% 100%;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0s 0.3s;
+  }
+  a:hover {
+    background-position: 0 100%;
+    background-size: 2px 0%;
   }
   img {
     max-width: 50%;
@@ -40,6 +50,7 @@
     gap: 25px;
     justify-content: flex-start;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   @media (max-width: $layout-breakpoint-large) {
     gap: 25px;
@@ -87,9 +98,9 @@
       font-size: 2.2rem;
     }
     ul {
-      flex-direction: column;
-      gap: 25px;
-      text-align: center;
+      justify-content: flex-start;
+      gap: 30px;
+      margin-bottom: 5rem;
     }
   }
 }
