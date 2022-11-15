@@ -40,7 +40,7 @@ const CTA = (): React.ReactElement => {
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { ease: 'easeInOut', duration: 0.5 },
+          transition: { ease: 'easeInOut', duration: 0.5, delay: 0.3 },
         }}
         exit={{ opacity: 0 }}
       >
