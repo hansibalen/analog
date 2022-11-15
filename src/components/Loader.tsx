@@ -62,7 +62,7 @@ const Loader = ({ setLoading }: { setLoading: any }): React.ReactElement => {
           <picture>
             <source
               media='(max-width: 481px)'
-              srcSet={require('@assets/images/loader/image-2-m.jpg')}
+              srcSet={require('@assets/images/loader/image-2-m.webp')}
             />
             <source
               media='(min-width: 768px)'

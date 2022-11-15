@@ -17,12 +17,23 @@ const CTA = (): React.ReactElement => {
       animate='animate'
       exit='exit'
     >
-      <motion.img
-        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-        src={require('@assets/images/loader/image-2.jpg')}
-        layoutId='main-image-1'
-        alt='transition hero image'
-      />
+      <picture>
+        <source
+          media='(max-width: 481px)'
+          srcSet={require('@assets/images/loader/image-2-m.webp')}
+        />
+        <source
+          media='(min-width: 768px)'
+          srcSet={require('@assets/images/loader/image-2.jpg')}
+        />
+        <motion.img
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+          src={require('@assets/images/loader/image-2.jpg')}
+          layoutId='main-image-1'
+          alt='transition hero image'
+        />
+      </picture>
+
       <motion.div
         className='cta'
         initial={{ opacity: 0, y: 50 }}

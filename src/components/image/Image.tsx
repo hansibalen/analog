@@ -2,11 +2,11 @@ import React from 'react';
 
 const Image = ({
   src,
+  srcSet,
   fallback,
   type,
   alt,
   media,
-  srcSet,
 }: {
   src: string;
   srcSet: string;
