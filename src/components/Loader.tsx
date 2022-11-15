@@ -59,11 +59,21 @@ const Loader = ({ setLoading }: { setLoading: any }): React.ReactElement => {
       >
         <ImageBlock variants={item} id='image-1' />
         <motion.div variants={itemMain} className='transition-image'>
-          <motion.img
-            layoutId='main-image-1'
-            src={require('@assets/images/loader/image-2.jpg')}
-            alt='hero-img-berlin'
-          />
+          <picture>
+            <source
+              media='(max-width: 481px)'
+              srcSet={require('@assets/images/loader/image-2-m.jpg')}
+            />
+            <source
+              media='(min-width: 768px)'
+              srcSet={require('@assets/images/loader/image-2.jpg')}
+            />
+            <motion.img
+              layoutId='main-image-1'
+              src={require('@assets/images/loader/image-2.jpg')}
+              alt='hero-img-berlin'
+            />
+          </picture>
         </motion.div>
         <ImageBlock variants={item} id='image-3' />
         <ImageBlock variants={item} id='image-4' />

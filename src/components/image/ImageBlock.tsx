@@ -24,6 +24,8 @@ const ImageBlock = ({
       }}
     >
       <Image
+        media='(max-width: 481px)'
+        srcSet={require(`@assets/images/loader/${id}-m.jpg`)}
         src={require(`@assets/images/loader/${id}.webp`)}
         fallback={`@assets/images/loader/${id}.jpg`}
         alt={id}
