@@ -1,7 +1,7 @@
-import { TabTitle } from '../../utils/GeneralFunctions';
-import { motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { TabTitle } from '../../utils/GeneralFunctions';
 
 const container = {
   hidden: { opacity: 0, transition: { duration: 0.5 } },

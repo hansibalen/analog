@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion, LayoutGroup, AnimatePresence } from 'framer-motion';
 import './sass/main.scss';
 import Loader from './components/Loader';
+import ScrollToTop from '../utils/ScrollToTop';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound';
-import ScrollToTop from '../utils/ScrollToTop';
 
 const App = (): React.ReactElement => {
   const [loading, setLoading] = useState(true);

@@ -8,6 +8,25 @@ const ctaAnimation = {
   exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
 };
 
+const whileInView = {
+  initial: { opacity: 0, y: 50 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { ease: 'easeInOut', duration: 0.5, delay: 0.3 },
+  },
+  exit: { opacity: 0 },
+};
+
+const behavior = {
+  hover: {
+    color: '#d4964b',
+    backgroundColor: '#24242a',
+    transition: { ease: 'easeInOut', duration: 0.3 },
+  },
+  tap: { scale: 0.8, transition: { ease: 'easeIn' } },
+};
+
 const CTA = (): React.ReactElement => {
   return (
     <motion.div
@@ -36,27 +55,18 @@ const CTA = (): React.ReactElement => {
 
       <motion.div
         className='cta'
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { ease: 'easeInOut', duration: 0.5, delay: 0.3 },
-        }}
-        exit={{ opacity: 0 }}
+        variants={whileInView}
+        initial='initial'
+        whileInView='animate'
+        exit='exit'
       >
         <h1 className='cta-title'>A curated memory box.</h1>
         <Link to={{ pathname: '/gallery' }} aria-label='Explore gallery'>
           <motion.div
             className='cta-btn'
-            whileHover={{
-              color: '#d4964b',
-              backgroundColor: '#24242a',
-              transition: { ease: 'easeInOut', duration: 0.3 },
-            }}
-            whileTap={{
-              scale: 0.8,
-              transition: { ease: 'easeIn' },
-            }}
+            whileHover='hover'
+            variants={behavior}
+            whileTap='tap'
           >
             Explore now.
           </motion.div>

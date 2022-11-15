@@ -1,6 +1,6 @@
-import { TabTitle } from '../../utils/GeneralFunctions';
-import { motion } from 'framer-motion';
 import React from 'react';
+import { motion } from 'framer-motion';
+import { TabTitle } from '../../utils/GeneralFunctions';
 
 const container = {
   hidden: { opacity: 0, y: 100, transition: { duration: 0.5 } },
@@ -21,6 +21,15 @@ const container = {
   },
 };
 
+const imageAnim = {
+  initial: { opacity: 0, y: 50 },
+  view: {
+    opacity: 1,
+    y: 0,
+    transition: { ease: 'easeIn', duration: 0.3, delay: 0.2 },
+  },
+};
+
 const Gallery = (): React.ReactElement => {
   TabTitle('analogue | Gallery');
   const array = [...Array(90).keys()];
@@ -38,13 +47,9 @@ const Gallery = (): React.ReactElement => {
             key={id}
             src={require(`@assets/images/gallery/image-${id}.jpg`)}
             alt={`image ${id}`}
-            loading='lazy'
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { ease: 'easeIn', duration: 0.3, delay: 0.2 },
-            }}
+            variants={imageAnim}
+            initial='initial'
+            whileInView='view'
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
-import { TabTitle } from '../../utils/GeneralFunctions';
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { TabTitle } from '../../utils/GeneralFunctions';
 import { hero, HeroTopRow, HeroBottomRow } from '../components/TextAnimation';
 import CTA from '../components/CTA';
 
