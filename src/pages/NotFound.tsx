@@ -19,7 +19,7 @@ const container = {
 };
 
 const NotFound = (): React.ReactElement => {
-  TabTitle('analogue | Not Found');
+  TabTitle('analog | Not Found');
 
   return (
     <motion.div

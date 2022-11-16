@@ -44,7 +44,7 @@ const contact = {
 };
 
 const About = (): React.ReactElement => {
-  TabTitle('analogue | About');
+  TabTitle('analog | About');
 
   const socials = [
     { path: 'https://twitter.com/hnsblnbrg', title: 'Twitter' },

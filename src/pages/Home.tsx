@@ -5,7 +5,7 @@ import { hero, HeroTopRow, HeroBottomRow } from '../components/TextAnimation';
 import CTA from '../components/CTA';
 
 const Home = (): React.ReactElement => {
-  TabTitle('analogue | Home');
+  TabTitle('analog | Home');
 
   useEffect(() => {
     setTimeout(() => 2000);

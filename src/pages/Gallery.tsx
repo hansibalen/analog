@@ -31,7 +31,7 @@ const imageAnim = {
 };
 
 const Gallery = (): React.ReactElement => {
-  TabTitle('analogue | Gallery');
+  TabTitle('analog | Gallery');
   const array = [...Array(90).keys()];
 
   return (
