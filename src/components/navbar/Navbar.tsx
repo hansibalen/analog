@@ -43,16 +43,6 @@ const Navbar = (): React.ReactElement => {
         <ul className='navigation'>
           <NavbarLinks />
         </ul>
-        <div className='contact'>
-          <a
-            href='/cheeky'
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='to be announced btn'
-          >
-            TBA
-          </a>
-        </div>
         {/* Mobile menu */}
         <div className='hamburger-icon'>
           <Hamburger
