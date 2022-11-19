@@ -47,11 +47,10 @@ const About = (): React.ReactElement => {
   TabTitle('analog | About');
 
   const socials = [
-    { path: 'https://twitter.com/hnsblnbrg', title: 'Twitter' },
     { path: 'https://instagram.com/hansi.brahimasi', title: 'Instagram' },
     { path: 'https://www.youtube.com/@hansibal', title: 'YouTube' },
-    { path: 'https://letterboxd.com/hansibrahimasi/', title: 'Letterboxd' },
     { path: 'https://open.spotify.com/user/hansibal94', title: 'Spotify' },
+    { path: 'https://letterboxd.com/hansibrahimasi/', title: 'Letterboxd' },
   ];
   return (
     <motion.div
