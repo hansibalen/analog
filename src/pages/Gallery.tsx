@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
 import GalleryLoader from '@src/components/GalleryLoader';
+import Zoom from 'react-medium-image-zoom';
 
 const container = {
   hidden: { opacity: 0, y: 100, transition: { duration: 0.5 } },
@@ -54,6 +55,21 @@ const Gallery = (): React.ReactElement => {
       setLoading(false);
     }
   };
+
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+  const margin = isMobile ? 12 : 40;
+
   return (
     <>
       {/* Loader */}
@@ -76,16 +92,18 @@ const Gallery = (): React.ReactElement => {
       >
         <div className='portfolio'>
           {imgArray.map((id) => (
-            <motion.img
-              key={id}
-              src={require(`@assets/images/gallery/image-${id}.jpg`)}
-              alt={`image ${id}`}
-              variants={imageAnim}
-              initial='initial'
-              whileInView='view'
-              onLoad={imageLoaded}
-              style={{ display: loading ? 'none' : 'block' }}
-            />
+            <Zoom key={id} zoomMargin={margin}>
+              <motion.img
+                key={id}
+                src={require(`@assets/images/gallery/image-${id}.jpg`)}
+                alt={`image ${id}`}
+                variants={imageAnim}
+                initial='initial'
+                whileInView='view'
+                onLoad={imageLoaded}
+                style={{ display: loading ? 'none' : 'block' }}
+              />
+            </Zoom>
           ))}
         </div>
       </motion.div>
