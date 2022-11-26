@@ -69,11 +69,10 @@ const About = (): React.ReactElement => {
         <div className='about-text'>
           <motion.h1 variants={children}>Some backstory.</motion.h1>
           <motion.p variants={children}>
-            I have been a film photography enthusiast for the better part of 8
-            years now. Throughout this time frame, I have had the opportunity to
-            shoot a variety of rolls, from expired to discontinued brands.
-            Recently I shot my 100th film roll. So, to celebrate the milestone,
-            I built this website.
+            This is home to a decade long exploratory journey, translating life
+            through the lens of film photography. Cycling through expired to
+            discontinued brands, I&apos;ve reached my 100th film roll. A
+            milestone that&apos;s been commemorated into a virtual memory box.
           </motion.p>
           <motion.p variants={children} className='italic'>
             Inspired by René Burri, Greg Girard & Sebastião Salgado, legends of
