@@ -1,41 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const ctaAnimation = {
-  initial: { opacity: 0, y: 300 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-  exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
-};
-
-const whileInView = {
-  initial: { opacity: 0, y: 50 },
-  view: {
-    opacity: 1,
-    y: 0,
-    transition: { ease: 'easeInOut', duration: 0.5, delay: 0.3 },
-  },
-  exit: { opacity: 0 },
-};
-
-const behavior = {
-  hover: {
-    color: '#d4964b',
-    backgroundColor: '#24242a',
-    transition: { ease: 'easeInOut', duration: 0.3 },
-  },
-  tap: { scale: 0.8, transition: { ease: 'easeIn' } },
-};
+import { IntroAnimation, whileInView, behavior } from './anim/IntroAnimation';
 
 const CTA = (): React.ReactElement => {
   return (
-    <motion.div
-      className='transition-image final'
-      variants={ctaAnimation}
-      initial='initial'
-      animate='animate'
-      exit='exit'
-    >
+    <IntroAnimation className='transition-image final'>
       <picture>
         <source
           media='(max-width: 481px)'
@@ -72,7 +42,7 @@ const CTA = (): React.ReactElement => {
           </motion.div>
         </Link>
       </motion.div>
-    </motion.div>
+    </IntroAnimation>
   );
 };
 
