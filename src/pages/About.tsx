@@ -47,8 +47,8 @@ const About = (): React.ReactElement => {
           <motion.p variants={children}>
             This is home to a decade long exploratory journey, translating life
             through the lens of film photography. Cycling through expired to
-            discontinued brands, I&apos;ve reached my 100th film roll. A
-            milestone that&apos;s been commemorated into a virtual memory box.
+            discontinued brands, I have reached my 100th film roll. A milestone
+            that has been commemorated into a virtual memory box.
           </motion.p>
           <motion.p variants={children} className='italic'>
             Inspired by René Burri, Greg Girard & Sebastião Salgado, legends of
