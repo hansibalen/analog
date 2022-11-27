@@ -1,17 +1,20 @@
 .not-found {
-  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
+  padding: 0 12px;
   .content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 4rem;
-    p,
+    gap: 3rem;
+    p {
+      font-size: 8rem;
+      font-weight: 700;
+    }
     .btn {
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: 600;
     }
     img {
@@ -20,7 +23,7 @@
     .btn {
       display: inline-block;
       text-decoration: none;
-      padding: 15px;
+      padding: 10px;
       border-radius: 20px;
       color: $black;
       background-color: $background;
@@ -38,8 +41,6 @@
 @media (max-width: $layout-breakpoint-xsmall) {
   .not-found {
     .content {
-      gap: 2.5rem;
-      p,
       .btn {
         font-size: 2rem;
         font-weight: 600;

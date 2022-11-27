@@ -1,25 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
-
-const container = {
-  hidden: { opacity: 0, y: 100, transition: { duration: 0.5 } },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.2,
-      duration: 0.5,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 300,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { IntroAnimation } from '@src/components/anim/IntroAnimation';
 
 const children = {
   hidden: {
@@ -53,13 +35,7 @@ const About = (): React.ReactElement => {
     { path: 'https://letterboxd.com/hansibrahimasi/', title: 'Letterboxd' },
   ];
   return (
-    <motion.div
-      variants={container}
-      initial='hidden'
-      animate='show'
-      exit='exit'
-      className='about-container'
-    >
+    <IntroAnimation className='about-container'>
       <motion.img
         variants={children}
         src={require('@assets/images/meta.jpg')}
@@ -100,7 +76,7 @@ const About = (): React.ReactElement => {
           </motion.ul>
         </div>
       </div>
-    </motion.div>
+    </IntroAnimation>
   );
 };
 

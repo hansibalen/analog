@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
 
 const container = {
-  hidden: { opacity: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, transition: { duration: 0.8 } },
   show: {
     opacity: 1,
     y: 0,
@@ -30,7 +30,7 @@ const NotFound = (): React.ReactElement => {
       className='not-found'
     >
       <div className='content'>
-        <p>Nothing going on here.</p>
+        <p>404</p>
         <img src={require('@assets/images/notfound.jpg')} />
         <Link to='/' aria-label='Go back home'>
           <div className='btn'>Go back.</div>

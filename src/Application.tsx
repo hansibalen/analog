@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { LayoutGroup, AnimatePresence } from 'framer-motion';
 import './sass/main.scss';
-import Loader from './components/Loader';
-import SecondaryLoader from './components/SecondaryLoader';
+import Loader from './components/loader/Loader';
+import SecondaryLoader from './components/loader/SecondaryLoader';
 import ScrollToTop from '../utils/ScrollToTop';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
@@ -36,7 +36,6 @@ const App = (): React.ReactElement => {
                 <AnimatePresence mode='wait'>
                   <ScrollToTop />
                   <Routes location={location} key={location.pathname}>
-                    {!loading}
                     <Route path='/' element={<Home />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/gallery' element={<Gallery />} />

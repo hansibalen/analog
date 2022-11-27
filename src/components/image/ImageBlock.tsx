@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Image from './Image';
 
 const ImageBlock = ({
@@ -11,7 +10,7 @@ const ImageBlock = ({
 }: {
   posX?: number;
   posY?: number;
-  variants: any;
+  variants: Variants;
   id: string;
 }) => {
   return (

@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TabTitle } from '../../utils/GeneralFunctions';
+import { TabTitle } from '../../../utils/GeneralFunctions';
 
 const SecondaryLoader = ({
   setLoading,
 }: {
-  setLoading: any;
+  setLoading: (value: boolean) => void;
 }): React.ReactElement => {
   TabTitle('Patience is a virtue.');
 

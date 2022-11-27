@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TabTitle } from '../../utils/GeneralFunctions';
-import ImageBlock from './image/ImageBlock';
+import { TabTitle } from '../../../utils/GeneralFunctions';
+import ImageBlock from '../image/ImageBlock';
 
 const container = {
   show: {
@@ -44,7 +43,11 @@ const itemMain = {
   },
 };
 
-const Loader = ({ setLoading }: { setLoading: any }): React.ReactElement => {
+const Loader = ({
+  setLoading,
+}: {
+  setLoading: (value: boolean) => void;
+}): React.ReactElement => {
   TabTitle('Patience is a virtue.');
 
   return (

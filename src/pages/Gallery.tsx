@@ -1,27 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
-import GalleryLoader from '@src/components/GalleryLoader';
+import GalleryLoader from '@src/components/loader/GalleryLoader';
 import Zoom from 'react-medium-image-zoom';
-
-const container = {
-  hidden: { opacity: 0, y: 100, transition: { duration: 0.5 } },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.2,
-      duration: 0.5,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 300,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { IntroAnimation } from '@src/components/anim/IntroAnimation';
 
 const imageAnim = {
   initial: { opacity: 0, y: 50 },
@@ -84,12 +66,7 @@ const Gallery = (): React.ReactElement => {
         <GalleryLoader />
       </motion.div>
       {/* Container */}
-      <motion.div
-        variants={container}
-        initial='hidden'
-        animate='show'
-        exit='exit'
-      >
+      <IntroAnimation>
         <div className='portfolio'>
           {imgArray.map((id) => (
             <Zoom key={id} zoomMargin={margin}>
@@ -106,7 +83,7 @@ const Gallery = (): React.ReactElement => {
             </Zoom>
           ))}
         </div>
-      </motion.div>
+      </IntroAnimation>
     </>
   );
 };

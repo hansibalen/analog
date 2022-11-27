@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
-import { hero, HeroTopRow, HeroBottomRow } from '../components/TextAnimation';
 import CTA from '../components/CTA';
+import {
+  hero,
+  HeroTopRow,
+  HeroBottomRow,
+} from '../components/anim/TextAnimation';
 
 const Home = (): React.ReactElement => {
   TabTitle('analog | Home');
