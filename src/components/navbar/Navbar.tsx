@@ -20,7 +20,7 @@ const Navbar = (): React.ReactElement => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setSticky(window.scrollY > 200);
+      setSticky(window.scrollY > 100);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

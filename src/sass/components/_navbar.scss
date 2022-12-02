@@ -37,8 +37,10 @@ nav {
     .logo {
       font-weight: 700;
       font-size: 3.6rem;
+      letter-spacing: -1rem;
       @media (max-width: $layout-breakpoint-medium) {
         font-size: 3.2rem;
+        letter-spacing: -0.8rem;
         flex: 4;
       }
     }
