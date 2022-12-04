@@ -32,8 +32,8 @@
 .cta-btn {
   display: inline-block;
   margin-top: 2rem;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 1.5rem;
+  border-radius: 2rem;
   color: $black;
   background-color: $background;
   border: 3px solid $black;
@@ -42,7 +42,7 @@
   @media (max-width: $layout-breakpoint-small) {
     color: $gold;
     background-color: $black;
-    padding: 10px 25px;
-    border-radius: 9px;
+    padding: 1rem 2.5rem;
+    border-radius: 0.9rem;
   }
 }

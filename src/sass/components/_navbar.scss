@@ -1,10 +1,10 @@
 nav {
   font-size: 1.7rem;
-  height: 100px;
+  height: 7rem;
   width: 100%;
+  padding: 0 10.8rem;
   display: flex;
   justify-content: center;
-  padding: 0px 108px;
   color: $black;
   transition: 0.3s all;
   &.sticky {
@@ -18,16 +18,12 @@ nav {
     top: 0;
   }
   @media (max-width: $layout-breakpoint-medium) {
-    padding: 0 72px;
+    padding: 0 7.2rem;
     font-size: 1.6rem;
   }
   @media (max-width: $layout-breakpoint-xsmall) {
-    padding: 0 12px;
-    height: 96px;
+    padding: 0 1.2rem;
     font-size: 1.2rem;
-    &.sticky {
-      height: 96px;
-    }
   }
   .header-content {
     width: 100%;
@@ -56,7 +52,7 @@ nav {
       transform: translateX(-50%);
       li {
         list-style: none;
-        margin: 0 40px;
+        margin: 0 4rem;
         a,
         .nav-logo {
           text-decoration: none;
@@ -108,7 +104,7 @@ nav {
   list-style: none;
   ul {
     display: flex;
-    gap: 50px;
+    gap: 5rem;
     flex-direction: column;
     align-self: center;
   }

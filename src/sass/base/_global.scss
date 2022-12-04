@@ -6,8 +6,8 @@
 body {
   background: $background;
   overflow-x: hidden;
+  overflow-y: scroll;
   height: 100vh;
-  margin: auto;
   -webkit-tap-highlight-color: transparent;
 }
 
