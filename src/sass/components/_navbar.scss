@@ -75,6 +75,7 @@ nav {
     // Mobile menu
     .hamburger-icon {
       z-index: 200;
+      width: 3.8rem;
       @media (min-width: 961px) {
         display: none;
       }
