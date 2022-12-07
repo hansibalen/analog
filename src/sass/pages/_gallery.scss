@@ -33,6 +33,18 @@
     }
   }
 }
+.desktop {
+  display: none;
+  @media (min-width: $layout-breakpoint-medium) {
+    display: block;
+  }
+}
+.mobile {
+  display: none;
+  @media (max-width: $layout-breakpoint-medium) {
+    display: block;
+  }
+}
 
 .gallery-loader {
   position: absolute;
