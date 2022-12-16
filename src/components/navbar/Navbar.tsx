@@ -2,17 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import NavbarLinks from './NavbarLinks';
-
-const mobile = {
-  open: {
-    opacity: 1,
-    transition: { duration: 0.5, ease: 'easeInOut' },
-  },
-  closed: {
-    opacity: 0,
-    transition: { duration: 0.5, ease: 'easeInOut' },
-  },
-};
+import { mobile } from '../anim/AnimValues';
 
 const Navbar = (): React.ReactElement => {
   const [isOpen, setOpen] = useState(false);

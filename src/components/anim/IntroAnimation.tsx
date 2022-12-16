@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-// Section animation properties
+// Section animation common properties
 const container = {
   hidden: { opacity: 0, y: 100, transition: { duration: 0.5 } },
   show: {
@@ -38,23 +38,3 @@ export const IntroAnimation = ({
     {children}
   </motion.section>
 );
-
-// CTA behavior
-export const whileInView = {
-  initial: { opacity: 0, y: 20 },
-  view: {
-    opacity: 1,
-    y: 0,
-    transition: { ease: 'easeInOut', duration: 0.5, delay: 0.3 },
-  },
-  exit: { opacity: 0 },
-};
-
-export const behavior = {
-  hover: {
-    color: '#d4964b',
-    backgroundColor: '#24242a',
-    transition: { ease: 'easeInOut', duration: 0.3 },
-  },
-  tap: { scale: 0.8, transition: { ease: 'easeIn' } },
-};

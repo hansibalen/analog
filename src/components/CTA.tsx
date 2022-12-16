@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { IntroAnimation, whileInView, behavior } from './anim/IntroAnimation';
+import { IntroAnimation } from './anim/IntroAnimation';
+import { whileInView, behavior } from './anim/AnimValues';
 
 const CTA = (): React.ReactElement => {
   return (

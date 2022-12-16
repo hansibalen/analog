@@ -1,11 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
-const highlight = {
-  scale: 0.8,
-  transition: { ease: 'easeIn' },
-};
+import { highlight } from '../anim/AnimValues';
 
 const NavbarLinks = (): React.ReactElement => {
   const navArray = [

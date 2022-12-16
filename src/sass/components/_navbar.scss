@@ -41,6 +41,11 @@ nav {
       }
     }
     .navigation {
+      @media (min-width: $layout-breakpoint-xlarge) {
+        li {
+          font-size: 0.9vw;
+        }
+      }
       @media (max-width: $layout-breakpoint-medium) {
         display: none;
       }
@@ -90,7 +95,7 @@ nav {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11.7px);
   -webkit-backdrop-filter: blur(11.7px);
-  font-size: 4rem;
+  font-size: 13vw;
   z-index: 150;
   min-width: 100%;
   min-height: 100%;
@@ -105,9 +110,10 @@ nav {
   list-style: none;
   ul {
     display: flex;
-    gap: 5rem;
+    gap: 6rem;
     flex-direction: column;
     align-self: center;
+    text-align: left;
   }
 }
 .mobile-show a {

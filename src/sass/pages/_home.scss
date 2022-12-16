@@ -13,6 +13,9 @@
     &.center {
       justify-content: center;
       text-align: center;
+      @media (min-width: $layout-breakpoint-xlarge) {
+        margin-bottom: -1vw;
+      }
       @media (max-width: $layout-breakpoint-large) {
         margin-bottom: 5rem;
       }
@@ -40,6 +43,9 @@
       letter-spacing: -0.8rem;
       display: inline-block;
       white-space: nowrap;
+      @media (min-width: $layout-breakpoint-xlarge) {
+        font-size: 20vh;
+      }
       @media (max-width: $layout-breakpoint-large) {
         font-size: 18rem;
       }
@@ -80,6 +86,10 @@
         margin-left: 1.5rem;
       }
       .row-subtitle {
+        @media (min-width: $layout-breakpoint-xlarge) {
+          font-size: 0.9vw;
+          width: 42%;
+        }
         font-weight: 500;
         font-size: 1.8rem;
         line-height: 2.6rem;

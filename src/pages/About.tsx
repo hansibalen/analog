@@ -1,39 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TabTitle } from '../../utils/GeneralFunctions';
+import { TabTitle, socials } from '../../utils/GeneralFunctions';
 import { IntroAnimation } from '@src/components/anim/IntroAnimation';
-
-const children = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-    },
-  },
-};
-
-const contact = {
-  hover: {
-    color: '#d4964b',
-    transition: { ease: 'easeInOut', duration: 0.3 },
-  },
-  tap: { scale: 0.8, transition: { ease: 'easeIn' } },
-};
+import { children, contact } from '@src/components/anim/AnimValues';
 
 const About = (): React.ReactElement => {
   TabTitle('analog | About');
 
-  const socials = [
-    { path: 'https://instagram.com/hansi.brahimasi', title: 'Instagram' },
-    { path: 'https://www.youtube.com/@hansibal', title: 'YouTube' },
-    { path: 'https://open.spotify.com/user/hansibal94', title: 'Spotify' },
-    { path: 'https://letterboxd.com/hansibrahimasi/', title: 'Letterboxd' },
-  ];
   return (
     <IntroAnimation className='about-container'>
       <motion.img

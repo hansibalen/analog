@@ -2,28 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TabTitle } from '../../utils/GeneralFunctions';
-
-const container = {
-  hidden: { opacity: 0, transition: { duration: 0.8 } },
-  show: {
-    opacity: 1,
-    y: 0,
-  },
-  exit: {
-    opacity: 0,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { notfoundvariants } from '@src/components/anim/AnimValues';
 
 const NotFound = (): React.ReactElement => {
   TabTitle('analog | Not Found');
 
   return (
     <motion.div
-      variants={container}
+      variants={notfoundvariants}
       initial='hidden'
       animate='show'
       exit='exit'

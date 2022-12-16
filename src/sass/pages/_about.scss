@@ -31,8 +31,46 @@
     background-position: 0 100%;
     background-size: 2px 0%;
   }
+  @media (min-width: 1920px) {
+    h1 {
+      font-size: 2.1vw;
+      font-weight: 600;
+    }
+    p,
+    a {
+      font-size: 0.9vw;
+      line-height: 1.5vw;
+    }
+  }
+  @media (max-width: $layout-breakpoint-large) {
+    gap: 2rem;
+    justify-content: center;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: $layout-breakpoint-medium) {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 95vh;
+    padding: 2rem 7.2rem;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    height: 80vh;
+    h1 {
+      text-align: center;
+    }
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    justify-content: flex-start;
+    padding: 2rem 1.2rem;
+  }
+
   img {
     max-width: 50%;
+    @media (max-width: $layout-breakpoint-medium) {
+      min-width: 100%;
+    }
   }
   .about-intro,
   .about-text {
@@ -51,45 +89,15 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  @media (max-width: $layout-breakpoint-large) {
-    gap: 2rem;
-    justify-content: center;
-    h1 {
-      font-size: 3rem;
-    }
-    p,
-    a {
-      line-height: 2rem;
-    }
-    ul {
+    @media (max-width: $layout-breakpoint-large) {
       gap: 1.5rem;
       margin-bottom: 2rem;
     }
-  }
-  @media (max-width: $layout-breakpoint-medium) {
-    flex-direction: column;
-    justify-content: flex-start;
-    img {
-      min-width: 100%;
-    }
-    height: 95vh;
-    padding: 2rem 7.2rem;
-  }
-  @media (max-width: $layout-breakpoint-small) {
-    height: 80vh;
-    h1 {
-      text-align: center;
-    }
-    ul {
-      justify-content: space-between;
+    @media (max-width: $layout-breakpoint-small) {
       gap: 2rem;
+      justify-content: space-between;
     }
-  }
-  @media (max-width: $layout-breakpoint-xsmall) {
-    justify-content: flex-start;
-    padding: 2rem 1.2rem;
-    ul {
+    @media (max-width: $layout-breakpoint-xsmall) {
       gap: 3rem;
       margin-bottom: 2rem;
     }

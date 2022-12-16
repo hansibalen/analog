@@ -4,31 +4,11 @@ import { TabTitle } from '../../utils/GeneralFunctions';
 import GalleryLoader from '@src/components/loader/GalleryLoader';
 import Zoom from 'react-medium-image-zoom';
 import { IntroAnimation } from '@src/components/anim/IntroAnimation';
-
-const imageAnim = {
-  initial: { opacity: 0, y: 50 },
-  view: {
-    opacity: 1,
-    y: 0,
-    transition: { ease: 'easeIn', duration: 0.3, delay: 0.2 },
-  },
-};
-
-const loader = {
-  loading: {
-    opacity: 1,
-    transition: { duration: 0.2, ease: 'easeInOut' },
-  },
-  hide: {
-    opacity: 0,
-    transition: { duration: 0.2, ease: 'easeOut' },
-  },
-};
+import { imageAnim, loader } from '@src/components/anim/AnimValues';
 
 const Gallery = (): React.ReactElement => {
   TabTitle('analog | Gallery');
   const imgArray = [...Array(90).keys()];
-
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
   const imageLoaded = () => {
