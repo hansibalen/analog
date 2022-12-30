@@ -9,11 +9,6 @@ const About = (): React.ReactElement => {
 
   return (
     <IntroAnimation className='about-container'>
-      <motion.img
-        variants={children}
-        src={require('@assets/images/meta.jpg')}
-        alt='about-img-burial-ubahn'
-      />
       <div className='about-intro'>
         <div className='about-text'>
           <motion.h1 variants={children}>Some backstory.</motion.h1>

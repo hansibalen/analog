@@ -1,20 +1,45 @@
 .about-container {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  text-align: left;
-  height: 80vh;
-  max-width: 100%;
-  gap: 5rem;
+  justify-content: center;
+  height: calc(100vh - 100px);
   padding: 0 10.8rem;
+  @media (max-width: $layout-breakpoint-medium) {
+    padding: 0 7.2rem;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 1.2rem;
+  }
   h1 {
-    font-size: 4rem;
+    font-size: 4vw;
     font-weight: 600;
+    text-align: center;
+    @media (max-width: $layout-breakpoint-large) {
+      font-size: 5vw;
+    }
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 8vw;
+    }
+  }
+  p {
+    align-self: center;
+    hyphens: auto;
+    width: 850px;
+    @media (min-width: 1920px) {
+      width: 53%;
+    }
+    @media (max-width: $layout-breakpoint-medium) {
+      width: 100%;
+    }
   }
   p,
   a {
     font-size: 1.6rem;
     line-height: 2.5rem;
+    @media (min-width: 1920px) {
+      font-size: 0.9vw;
+      line-height: 1.5vw;
+    }
   }
   a {
     text-decoration: none;
@@ -31,75 +56,32 @@
     background-position: 0 100%;
     background-size: 2px 0%;
   }
-  @media (min-width: 1920px) {
-    h1 {
-      font-size: 2.1vw;
-      font-weight: 600;
-    }
-    p,
-    a {
-      font-size: 0.9vw;
-      line-height: 1.5vw;
-    }
-  }
-  @media (max-width: $layout-breakpoint-large) {
-    gap: 2rem;
-    justify-content: center;
-    h1 {
-      font-size: 3rem;
-    }
-  }
-  @media (max-width: $layout-breakpoint-medium) {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 95vh;
-    padding: 2rem 7.2rem;
-  }
-  @media (max-width: $layout-breakpoint-small) {
-    height: 80vh;
-    h1 {
-      text-align: center;
-    }
-  }
-  @media (max-width: $layout-breakpoint-xsmall) {
-    justify-content: flex-start;
-    padding: 2rem 1.2rem;
-  }
-
-  img {
-    max-width: 50%;
-    @media (max-width: $layout-breakpoint-medium) {
-      min-width: 100%;
-    }
-  }
-  .about-intro,
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
-  .italic {
-    font-style: italic;
-    font-weight: 300;
-  }
+}
+.about-intro,
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  margin-bottom: 2vw;
+  align-items: center;
   ul {
     display: flex;
-    gap: 2.5rem;
-    justify-content: flex-start;
+    gap: 4vw;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    @media (max-width: $layout-breakpoint-large) {
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
+    margin-bottom: 2rem;
     @media (max-width: $layout-breakpoint-small) {
-      gap: 2rem;
       justify-content: space-between;
     }
-    @media (max-width: $layout-breakpoint-xsmall) {
-      gap: 3rem;
-      margin-bottom: 2rem;
-    }
   }
+}
+.about-intro {
+  @media (max-width: $layout-breakpoint-small) {
+    gap: 8vw;
+  }
+}
+.italic {
+  font-style: italic;
+  font-weight: 300;
 }
